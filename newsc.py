@@ -687,12 +687,12 @@ def ririnBot(op):
                                     wait["keyCommand"] = str(key).lower()
                                     ririn.sendMessage(to, "sᴜᴄᴄᴇs ᴄʜᴀɴɢᴇ ᴋᴇʏ [ {} ]".format(str(key).lower()))
                             elif cmd == "sp":
-                            	ririn.sendText(msg.to, "❂➣ ʟᴏᴀᴅɪɴɢ...")
+                            	ririn.sendMessage(to, "❂➣ ʟᴏᴀᴅɪɴɢ...")
                             	sp = int(round(time.time() *1000))
                             	ririn.sendMessage(to,"ᴍʏ sᴘᴇᴇᴅ : %sms" % (sp - op.createdTime))
                             elif cmd == "speed":
                             	start = time.time()
-                            	ririn.sendText(msg.to, "❂➣ ʟᴏᴀᴅɪɴɢ...")
+                            	ririn.sendMessage(to, "❂➣ ʟᴏᴀᴅɪɴɢ...")
                             	elapsed_time = time.time() - start
                             	ririn.sendMessage(to, "ᴍʏ sᴘᴇᴇᴅ : %sms" % (elapsed_time))
                             elif cmd == "runtime":
@@ -706,90 +706,90 @@ def ririnBot(op):
 # Pembatas Script #
                             elif cmd == "autoadd on":
                                 wait["autoAdd"] = True
-                                ririn.sendMessage(to, "Berhasil mengaktifkan auto add")
+                                ririn.sendMessage(to, "ᴀᴜᴛᴏ ᴀᴅᴅ ᴏɴ")
                             elif cmd == "autoadd off":
                                 wait["autoAdd"] = False
-                                ririn.sendMessage(to, "Berhasil menonaktifkan auto add")
+                                ririn.sendMessage(to, "ᴀᴜᴛᴏ ᴀᴅᴅ ᴏғғ")
                             elif cmd == "autojoin on":
                                 wait["autoJoin"] = True
-                                ririn.sendMessage(to, "Berhasil mengaktifkan auto join")
+                                ririn.sendMessage(to, "ᴀᴜᴛᴏ ᴊᴏɪɴ ᴏɴ")
                             elif cmd == "autojoin off":
                                 wait["autoJoin"] = False
-                                ririn.sendMessage(to, "Berhasil menonaktifkan auto join")
+                                ririn.sendMessage(to, "ᴀᴜᴛᴏ ᴊᴏɪɴ ᴏɴ ᴏғғ")
                             elif cmd == "autoleave on":
                                 wait["autoLeave"] = True
-                                ririn.sendMessage(to, "Berhasil mengaktifkan auto leave")
+                                ririn.sendMessage(to, "ᴀᴜᴛᴏ ʟᴇᴀᴠᴇ ᴏɴ")
                             elif cmd == "autoleave off":
                                 wait["autoLeave"] = False
-                                ririn.sendMessage(to, "Berhasil menonaktifkan auto leave")
+                                ririn.sendMessage(to, "ᴀᴜᴛᴏ ʟᴇᴀᴠᴇ ᴏғғ")
                             elif cmd == "autorespon on":
                                 wait["autoRespon"] = True
-                                ririn.sendMessage(to, "Berhasil mengaktifkan auto respon")
+                                ririn.sendMessage(to, "ᴀᴜᴛᴏ ʀᴇsᴘᴏɴ ᴏɴ")
                             elif cmd == "autorespon off":
                                 wait["autoRespon"] = False
-                                ririn.sendMessage(to, "Berhasil menonaktifkan auto respon")
+                                ririn.sendMessage(to, "ᴀᴜᴛᴏ ʀᴇsᴘᴏɴ ᴏғғ")
                             elif cmd == "autoread on":
                                 wait["autoRead"] = True
-                                ririn.sendMessage(to, "Berhasil mengaktifkan auto read")
+                                ririn.sendMessage(to, "ᴀᴜᴛᴏ ʀᴇᴀᴅ ᴏɴ")
                             elif cmd == "autoread off":
                                 wait["autoRead"] = False
-                                ririn.sendMessage(to, "Berhasil menonaktifkan auto read")
+                                ririn.sendMessage(to, "ᴀᴜᴛᴏ ʀᴇᴀᴅ ᴏғғ")
                             elif cmd == "autojointicket on":
                                 wait["autoJoinTicket"] = True
-                                ririn.sendMessage(to, "Berhasil mengaktifkan auto join by ticket")
+                                ririn.sendMessage(to, "ᴊᴏɪɴ ʙʏ ᴛɪᴄᴋᴇᴛ ᴏɴ")
                             elif cmd == "autoJoinTicket off":
                                 wait["autoJoin"] = False
-                                ririn.sendMessage(to, "Berhasil menonaktifkan auto join by ticket")
+                                ririn.sendMessage(to, "ᴊᴏɪɴ ʙʏ ᴛɪᴄᴋᴇᴛ ᴏғғ")
                             elif cmd == "checkcontact on":
                                 wait["checkContact"] = True
-                                ririn.sendMessage(to, "Berhasil mengaktifkan check details contact")
+                                ririn.sendMessage(to, "ᴄʜᴇᴄᴋ ᴄᴏɴᴛᴀᴄᴛ ᴏɴ")
                             elif cmd == "checkcontact off":
                                 wait["checkContact"] = False
-                                ririn.sendMessage(to, "Berhasil menonaktifkan check details contact")
+                                ririn.sendMessage(to, "ᴄʜᴇᴄᴋ ᴄᴏɴᴛᴀᴄᴛ ᴏғғ")
                             elif cmd == "checkpost on":
                                 wait["checkPost"] = True
-                                ririn.sendMessage(to, "Berhasil mengaktifkan check details post")
+                                ririn.sendMessage(to, "ᴄʜᴇᴄᴋ ᴘᴏsᴛ ᴏɴ")
                             elif cmd == "checkpost off":
                                 wait["checkPost"] = False
-                                ririn.sendMessage(to, "Berhasil menonaktifkan check details post")
+                                ririn.sendMessage(to, "ᴄʜᴇᴄᴋ ᴘᴏsᴛ ᴏғғ")
                             elif cmd == "checksticker on":
                                 wait["checkSticker"] = True
-                                ririn.sendMessage(to, "Berhasil mengaktifkan check details sticker")
+                                ririn.sendMessage(to, "ᴄʜᴇᴄᴋ sᴛɪᴄᴋᴇʀ ᴏɴ")
                             elif cmd == "checksticker off":
                                 wait["checkSticker"] = False
-                                ririn.sendMessage(to, "Berhasil menonaktifkan check details sticker")
+                                ririn.sendMessage(to, "ᴄʜᴇᴄᴋ sᴛɪᴄᴋᴇʀ ᴏғғ")
                             elif cmd == "unsendchat on":
                                 wait["unsendMessage"] = True
-                                ririn.sendMessage(to, "Berhasil mengaktifkan unsend message")
+                                ririn.sendMessage(to, "ᴜɴsᴇɴᴅ ᴍᴇssᴀɢᴇ ᴏɴ")
                             elif cmd == "unsendchat off":
                                 wait["unsendMessage"] = False
-                                ririn.sendMessage(to, "Berhasil menonaktifkan unsend message")
+                                ririn.sendMessage(to, "ᴜɴsᴇɴᴅ ᴍᴇssᴀɢᴇ ᴏғғ")
                             elif cmd == "status":
                                 try:
-                                    ret_ = "╔══[ Status ]"
-                                    if wait["autoAdd"] == True: ret_ += "\n╠══[ ON ] Auto Add"
-                                    else: ret_ += "\n╠══[ OFF ] Auto Add"
-                                    if wait["autoJoin"] == True: ret_ += "\n╠══[ ON ] Auto Join"
-                                    else: ret_ += "\n╠══[ OFF ] Auto Join"
-                                    if wait["autoLeave"] == True: ret_ += "\n╠══[ ON ] Auto Leave Room"
-                                    else: ret_ += "\n╠══[ OFF ] Auto Leave Room"
-                                    if wait["autoJoinTicket"] == True: ret_ += "\n╠══[ ON ] Auto Join Ticket"
-                                    else: ret_ += "\n╠══[ OFF ] Auto Join Ticket"
-                                    if wait["autoRead"] == True: ret_ += "\n╠══[ ON ] Auto Read"
-                                    else: ret_ += "\n╠══[ OFF ] Auto Read"
-                                    if wait["autoRespon"] == True: ret_ += "\n╠══[ ON ] Detect Mention"
-                                    else: ret_ += "\n╠══[ OFF ] Detect Mention"
-                                    if wait["checkContact"] == True: ret_ += "\n╠══[ ON ] Check Contact"
-                                    else: ret_ += "\n╠══[ OFF ] Check Contact"
-                                    if wait["checkPost"] == True: ret_ += "\n╠══[ ON ] Check Post"
-                                    else: ret_ += "\n╠══[ OFF ] Check Post"
-                                    if wait["checkSticker"] == True: ret_ += "\n╠══[ ON ] Check Sticker"
-                                    else: ret_ += "\n╠══[ OFF ] Check Sticker"
-                                    if wait["setKey"] == True: ret_ += "\n╠══[ ON ] Set Key"
-                                    else: ret_ += "\n╠══[ OFF ] Set Key"
-                                    if wait["unsendMessage"] == True: ret_ += "\n╠══[ ON ] Unsend Message"
-                                    else: ret_ += "\n╠══[ OFF ] Unsend Message"
-                                    ret_ += "\n╚══[ Status ]"
+                                    ret_ = "╔═════[ ·✪·sᴛᴀᴛᴜs·✪· ]═════╗"
+                                    if wait["autoAdd"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴀᴜᴛᴏ ᴀᴅᴅ 「⚪」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴀᴜᴛᴏ ᴀᴅᴅ 「⚫」"
+                                    if wait["autoJoin"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴀᴜᴛᴏ ᴊᴏɪɴ 「⚪」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴀᴜᴛᴏ ᴊᴏɪɴ 「⚫」"
+                                    if wait["autoLeave"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴀᴜᴛᴏ ʟᴇᴀᴠᴇ 「⚪」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴀᴜᴛᴏ ʟᴇᴀᴠᴇ 「⚫」"
+                                    if wait["autoJoinTicket"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴊᴏɪɴ ᴛɪᴄᴋᴇᴛ 「⚪」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴊᴏɪɴ ᴛɪᴄᴋᴇᴛ 「⚫」"
+                                    if wait["autoRead"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴀᴜᴛᴏ ʀᴇᴀᴅ 「⚪」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] mᴀᴜᴛᴏ ʀᴇᴀᴅ 「⚫」"
+                                    if wait["autoRespon"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴀᴜᴛᴏ ʀᴇsᴘᴏɴ 「⚪」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴀᴜᴛᴏ ʀᴇsᴘᴏɴ 「⚫」"
+                                    if wait["checkContact"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴄʜᴇᴄᴋ ᴄᴏɴᴛᴀᴄᴛ 「⚪」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴄʜᴇᴄᴋ ᴄᴏɴᴛᴀᴄᴛ 「⚫」"
+                                    if wait["checkPost"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴄʜᴇᴄᴋ ᴘᴏsᴛ 「⚪」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴄʜᴇᴄᴋ ᴘᴏsᴛ 「⚫」"
+                                    if wait["checkSticker"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴄʜᴇᴄᴋ sᴛɪᴄᴋᴇʀ 「⚪」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴄʜᴇᴄᴋ sᴛɪᴄᴋᴇʀ 「⚫」"
+                                    if wait["setKey"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] sᴇᴛ ᴋᴇʏ 「⚪」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] sᴇᴛ ᴋᴇʏ 「⚫」"
+                                    if wait["unsendMessage"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴜɴsᴇɴᴅ ᴍsɢ 「⚪」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴜɴsᴇɴᴅ ᴍsɢ 「⚫」"
+                                    ret_ += "\n╚═════[ ✯ ᴅɴᴀ ʙᴏᴛ ✯ ]═════╝"
                                     ririn.sendMessage(to, str(ret_))
                                 except Exception as e:
                                     ririn.sendMessage(msg.to, str(e))
