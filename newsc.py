@@ -619,7 +619,7 @@ def ririnBot(op):
                     ririn.acceptGroupInvitation(op.param1)
                 dan = ririn.getContact(op.param2)
                 tgb = ririn.getGroup(op.param1)
-                sendMention(op.param1, "ʜᴀʟᴏ @!, ᴛʜx ғᴏʀ ɪɴᴠɪᴛᴇ ᴍᴇ ᴛᴏ {}")
+                sendMention(op.param1, "ʜᴀʟᴏ @!, ᴛʜx ғᴏʀ ɪɴᴠɪᴛᴇ ᴍᴇ")
                 ririn.sendContact(op.param1, op.param2)
                 ririn.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
                 
@@ -633,7 +633,7 @@ def ririnBot(op):
         if op.type == 17:
         	dan = ririn.getContact(op.param2)
         	tgb = ririn.getGroup(op.param1)
-        	sendMention(op.param1, "ʜᴏʟᴀ @!, \n ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ɢʀᴏᴜᴘ {} \nᴊᴀɴɢᴀɴ ʟᴜᴘᴀ ᴄʜᴇᴄᴋ ɴᴏᴛᴇ ʏᴀ \nᴀᴡᴀs ᴋᴀʟᴀᴜ ʙᴀᴘᴇʀᴀɴ😘😘😘".format(str(tgb.name)),[op.param2])
+        	sendMention(op.param1, "ʜᴏʟᴀ @!,        \n ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ɢʀᴏᴜᴘ {} \nᴊᴀɴɢᴀɴ ʟᴜᴘᴀ ᴄʜᴇᴄᴋ ɴᴏᴛᴇ ʏᴀ \nᴀᴡᴀs ᴋᴀʟᴀᴜ ʙᴀᴘᴇʀᴀɴ😘😘😘".format(str(tgb.name)),[op.param2])
         	ririn.sendContact(op.param1, op.param2)
         	ririn.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
 
