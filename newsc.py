@@ -619,7 +619,7 @@ def ririnBot(op):
                     ririn.acceptGroupInvitation(op.param1)
                 dan = ririn.getContact(op.param2)
                 tgb = ririn.getGroup(op.param1)
-                ririn.sendMessage(to, "ʜᴀʟᴏ, ᴛʜx ғᴏʀ ɪɴᴠɪᴛᴇ ᴍᴇ")
+                ririn.sendMessage(op.param1, "ʜᴀʟᴏ, ᴛʜx ғᴏʀ ɪɴᴠɪᴛᴇ ᴍᴇ")
                 ririn.sendContact(op.param1, op.param2)
                 ririn.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
                 
