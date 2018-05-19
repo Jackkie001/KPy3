@@ -48,6 +48,7 @@ wait = {
         "target": {}
     },
     "setKey": False,
+    "synrespon": True,
     "unsendMessage": True
 }
 
