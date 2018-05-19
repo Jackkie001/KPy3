@@ -633,14 +633,14 @@ def ririnBot(op):
         if op.type == 17:
         	dan = ririn.getContact(op.param2)
         	tgb = ririn.getGroup(op.param1)
-        	sendMention(op.param1, "ʜᴏʟᴀ @!,        \nᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ɢʀᴏᴜᴘ {} \nᴊᴀɴɢᴀɴ ʟᴜᴘᴀ ᴄʜᴇᴄᴋ ɴᴏᴛᴇ ʏᴀ \nᴀᴡᴀs ᴋᴀʟᴀᴜ ʙᴀᴘᴇʀᴀɴ😘😘😘".format(str(tgb.name)),[op.param2])
+        	sendMention(op.param1, "ʜᴏʟᴀ @!         ,\nᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ɢʀᴏᴜᴘ {} \nᴊᴀɴɢᴀɴ ʟᴜᴘᴀ ᴄʜᴇᴄᴋ ɴᴏᴛᴇ ʏᴀ \nᴀᴡᴀs ᴋᴀʟᴀᴜ ʙᴀᴘᴇʀᴀɴ 😘😘😘".format(str(tgb.name)),[op.param2])
         	ririn.sendContact(op.param1, op.param2)
         	ririn.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
 
         if op.type in [22, 24]:
             print ("[ 22 And 24 ] NOTIFIED INVITE INTO ROOM & NOTIFIED LEAVE ROOM")
             if wait["autoLeave"] == True:
-                sendMention(op.param1, "Oi asw @!       ,\nngapain invite saya")
+                sendMention(op.param1, "ᴡᴏʏ ᴋɴᴛʟᴏ @!         ,\nɴɢᴀᴘᴀɪɴ ɪɴᴠɪᴛᴇ ɢᴡ")
                 ririn.leaveRoom(op.param1)
 
         if op.type == 25:
@@ -682,22 +682,26 @@ def ririnBot(op):
                                 sep = text.split(" ")
                                 key = text.replace(sep[0] + " ","")
                                 if " " in key:
-                                    ririn.sendMessage(to, "Key tidak bisa menggunakan spasi")
+                                    ririn.sendMessage(to, "ᴅᴏɴ'ᴛ ᴛʏᴘᴏ ʙʀᴏ")
                                 else:
                                     wait["keyCommand"] = str(key).lower()
-                                    ririn.sendMessage(to, "Berhasil mengubah key command menjadi [ {} ]".format(str(key).lower()))
+                                    ririn.sendMessage(to, "sᴜᴄᴄᴇs ᴄʜᴀɴɢᴇ ᴋᴇʏ [ {} ]".format(str(key).lower()))
+                            elif cmd == "sp":
+                            	ririn.sendText(msg.to, "❂➣ ʟᴏᴀᴅɪɴɢ...")
+                            	sp = int(round(time.time() *1000))
+                            	ririn.sendMessage(to,"ᴍʏ sᴘᴇᴇᴅ : %sms" % (sp - op.createdTime))
                             elif cmd == "speed":
-                                start = time.time()
-                                ririn.sendMessage(to, "Benchmarking...")
-                                elapsed_time = time.time() - start
-                                ririn.sendMessage(to, "[ Speed ]\nKecepatan mengirim pesan {} detik".format(str(elapsed_time)))
+                            	start = time.time()
+                            	ririn.sendText(msg.to, "❂➣ ʟᴏᴀᴅɪɴɢ...")
+                            	elapsed_time = time.time() - start
+                            	ririn.sendMessage(to, "ᴍʏ sᴘᴇᴇᴅ : %sms" % (elapsed_time))
                             elif cmd == "runtime":
                                 timeNow = time.time()
                                 runtime = timeNow - botStart
                                 runtime = format_timespan(runtime)
-                                ririn.sendMessage(to, "Bot sudah berjalan selama {}".format(str(runtime)))
+                                ririn.sendMessage(to, "ʀᴜɴɴɪɴɢ ɪɴ.. {}".format(str(runtime)))
                             elif cmd == "restart":
-                                ririn.sendMessage(to, "Berhasil merestart Bot")
+                                ririn.sendMessage(to, "ʙᴏᴛ ʜᴀᴠᴇ ʙᴇᴇɴ ʀᴇsᴛᴀʀᴛ")
                                 restartBot()
 # Pembatas Script #
                             elif cmd == "autoadd on":
@@ -1674,7 +1678,7 @@ def ririnBot(op):
                             for mention in mentionees:
                                 if ririnMid in mention["M"]:
                                     if wait["autoRespon"] == True:
-                                        sendMention(sender, "ᴏɪ ᴍʙʟᴏ @!       ,\nɴɢᴀᴘᴀɪɴ ᴛᴀɢ ᴛᴀɢ ɢᴡ", [sender])
+                                        sendMention(sender, "ᴏɪ ᴍʙʟᴏ @!      ,\nɴɢᴀᴘᴀɪɴ ᴛᴀɢ ᴛᴀɢ ɢᴡ", [sender])
                                     break
             except Exception as error:
                 logError(error)
