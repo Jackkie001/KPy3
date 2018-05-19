@@ -1619,6 +1619,23 @@ def ririnBot(op):
                 traceback.print_tb(error.__traceback__)
                 
         if op.type == 26:
+            msg = op.message
+            if wait["synrespon"] == True:
+                if msg.toType == 0:
+                    ririn.sendChatChecked(msg._from,msg.id)
+                    contact = ririn.getContact(msg._from)
+                    cName = contact.displayName
+                    balas = ["╔════════════════════╗\n                   「ᴀᴜᴛᴏ ʀᴇᴘʟʏ」\n                             ʙʏ:\n                    ✰ ᴅɴᴀ ʙᴏᴛ ✰\n╚════════════════════╝\n\nʜᴀʟʟᴏ 「" + cName + "」\nᴍᴏʜᴏɴ ᴍᴀᴀғ sᴀʏᴀ sᴇᴅᴀɴɢ sɪʙᴜᴋ, ɪɴɪ ᴀᴅᴀʟᴀʜ ᴘᴇsᴀɴ ᴏᴛᴏᴍᴀᴛɪs, ᴊɪᴋᴀ ᴀᴅᴀ ʏᴀɴɢ ᴘᴇɴᴛɪɴɢ ᴍᴏʜᴏɴ ʜᴜʙᴜɴɢɪ sᴀʏᴀ ɴᴀɴᴛɪ, ᴛᴇʀɪᴍᴀᴋᴀsɪʜ...","╔════════════════════╗\n                   「ᴀᴜᴛᴏ ʀᴇᴘʟʏ」\n                             ʙʏ:\n                    ✰ ᴅɴᴀ ʙᴏᴛ ✰\n╚════════════════════╝\n\nʜᴀʟʟᴏ 「" + cName + "」\nsᴀʏᴀ ʟᴀɢɪ sɪʙᴜᴋ ʏᴀ ᴋᴀᴋ ᴊᴀɴɢᴀɴ ᴅɪɢᴀɴɢɢᴜ","╔════════════════════╗\n                   「ᴀᴜᴛᴏ ʀᴇᴘʟʏ」\n                             ʙʏ:\n                    ✰ ᴅɴᴀ ʙᴏᴛ ✰\n╚════════════════════╝\n\nʜᴀʟʟᴏ 「" + cName + "」\nsᴀʏᴀ sᴇᴅᴀɴɢ ᴛɪᴅᴜʀ ᴋᴀᴋ"]
+                    dee = "" + random.choice(balas)
+                    ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}".format(contact.picturePath))
+                    ririn.sendMessage(msg._from,dee)
+        if wait["pembaca"] == True:     
+                if msg.toType == 0:
+                    ririn.sendChatChecked(msg._from,msg.id)
+                else:
+                    ririn.sendChatChecked(msg.to,msg.id)
+                
+        if op.type == 26:
             try:
                 print ("[ 26 ] RECIEVE MESSAGE")
                 msg = op.message
@@ -1679,9 +1696,7 @@ def ririnBot(op):
                                 if ririnMid in mention["M"]:
                                     if wait["autoRespon"] == True:
                                         sendMention(sender, "ᴏɪ ᴍʙʟᴏ @!      ,\nɴɢᴀᴘᴀɪɴ ᴛᴀɢ ᴛᴀɢ ɢᴡ", [sender])
-                                        contact = ririn.getContact(ls)
-                                        path = "http://dl.profile.line.naver.jp/{}".format(contact.pictureStatus)
-                                        ririn.sendImageWithURL(to, str(path))
+                                        ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}")
                                     break
             except Exception as error:
                 logError(error)
@@ -1700,7 +1715,7 @@ def ririnBot(op):
                             else:
                                 name_ = contact.displayName
                                 ret_ = "Send Message cancelled."
-                                ret_ += "\nSender : @!"
+                                ret_ += "\nSender : @!" 
                                 ret_ += "\nSend At : {}".format(str(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"]))))
                                 ret_ += "\nType : {}".format(str(Type._VALUES_TO_NAMES[msg_dict[msg_id]["contentType"]]))
                                 ret_ += "\nText : {}".format(str(msg_dict[msg_id]["text"]))
