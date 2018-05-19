@@ -1691,7 +1691,11 @@ def ririnBot(op):
                             for mention in mentionees:
                                 if ririnMid in mention["M"]:
                                     if wait["autoRespon"] == True:
-                                        sendMention(sender, "ᴏɪ ᴍʙʟᴏ @!      ,\nɴɢᴀᴘᴀɪɴ ᴛᴀɢ ᴛᴀɢ ɢᴡ", [sender])
+                                    	ririn.sendChatChecked(msg._from,msg.id)
+                                    	contact = ririn.getContact(msg._from)
+                                    	sendMention(sender, "ᴏɪ ᴍʙʟᴏ @!      ,\nɴɢᴀᴘᴀɪɴ ᴛᴀɢ ᴛᴀɢ ɢᴡ", [sender])
+                                    	dee = "" + random.choice(balas)
+                                    	ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}".format(contact.picturePath))
                                     break
             except Exception as error:
                 logError(error)
