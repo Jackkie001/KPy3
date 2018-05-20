@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 from googletrans import Translator
 from humanfriendly import format_timespan, format_size, format_number, format_length
-import time, random, sys, json, codecs, threading, glob, re, string, os, requests, six, ast, pytz, urllib, urllib3, urllib.parse, traceback, atexit
+import time, random, sys, json, codecs, threading, glob, re, string, os, requests, six, ast, pytz, urllib, urllib3, urllib.parse, traceback, atexit, subprocess
 
 ririn = LINE("EtKtkL176FshhP9PKaV6.7kqscP17dKQEF08Bg5AKnG.XNdQINxpbD1oN9msScvYFDrCkFFwTtDiaAH4+0uKmNg=")
 #ririn = LINE("")
@@ -18,11 +18,6 @@ ririnProfile = ririn.getProfile()
 ririnSettings = ririn.getSettings()
 ririnPoll = OEPoll(ririn)
 botStart = time.time()
-
-Bots=[ririnMid]
-admin=["ueca4120a9d7b0e4a9e7f4f1b1b96a436","u40d66b1f1c5ce30fdce9507a73247ef1","uc2d366327a79c98701b0b8bd9e08c0c9","ubcce0f23f428d75703fb33ee06c083b6","ubd3c3fa2c0128918d5b484caa42f9fee","u6fc2dc5f5f0d0fc6a4d2e92626afb742"]
-Owner=["ueca4120a9d7b0e4a9e7f4f1b1b96a436"]
-creator=["ueca4120a9d7b0e4a9e7f4f1b1b96a436"]
 
 print ("╔═════════════════════════\n║╔════════════════════════\n║╠❂➣ DNA BERHASIL LOGIN\n║╚════════════════════════\n╚═════════════════════════")
 
@@ -1101,25 +1096,26 @@ def ririnBot(op):
                                         txt += u'@Zero \n'
                                     ririn.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
                                     ririn.sendMessage(to, "Total {} Mention".format(str(len(nama))))
+                                    
                             elif cmd == "sider on":
-                            	if msg._from in admin:
-                            		try:
-                            			del cctv["point"][msg.to]
-                            			del cctv["sidermem"][msg.to]
-                            			del cctv["cyduk"][msg.to]
-                            		except:
-                            			pass
-                            		cctv["point"][msg.to] = msg.id
-                            		cctv["sidermem"][msg.to] = ""
-                            		cctv["cyduk"][msg.to]=True
-                            		wait["Sider"] = True
-                            		ririn.sendMessage(receiver,"sɪᴅᴇʀ sᴇᴛ ᴛᴏ ᴏɴ")
+                            	try:
+                            		del cctv['point'][msg.to]
+                            		del cctv['sidermem'][msg.to]
+                            		del cctv['cyduk'][msg.to]
+                            	except:
+                            		pass
+                            	cctv['point'][msg.to] = msg.id
+                            	cctv['sidermem'][msg.to] = ""
+                            	cctv['cyduk'][msg.to]=True
+                            	wait["Sider"] = True
+                            	ririn.sendMessage(msg.to,"sɪᴅᴇʀ sᴇᴛ ᴛᴏ ᴏɴ")
                             elif cmd == "sider off":
-                            	if msg._from in admin:
-                            		if msg.to in cctv['point']:
-                            			cctv["cyduk"][msg.to]=False
-                            			wait["Sider"] = False
-                            			ririn.sendMessage(receiver,"sɪᴅᴇʀ sᴇᴛ ᴛᴏ ᴏғғ")
+                            	if msg.to in cctv['point']:
+                            		cctv['cyduk'][msg.to]=False
+                            		wait["Sider"] = False
+                            		ririn.sendMessage(msg.to,"sɪᴅᴇʀ sᴇᴛ ᴛᴏ ᴏғғ")
+                            	else:
+                            		ririn.sendMessage(msg.to,"sɪᴅᴇʀ ɴᴏᴛ sᴇᴛ")           
                             elif cmd == "lurking on":
                                 tz = pytz.timezone("Asia/Makassar")
                                 timeNow = datetime.now(tz=tz)
@@ -1798,15 +1794,6 @@ def ririnBot(op):
                     if cctv['cyduk'][op.param1]==True:
                         if op.param1 in cctv['point']:
                             Name = ririn.getContact(op.param2).displayName
-                            Name = dna1.getContact(op.param2).displayName
-                            Name = dna2.getContact(op.param2).displayName
-                            Name = dna3.getContact(op.param2).displayName
-                            Name = dna4.getContact(op.param2).displayName
-                            Name = dna5.getContact(op.param2).displayName
-                            Name = dna6.getContact(op.param2).displayName
-                            Name = dna7.getContact(op.param2).displayName
-                            Name = dna8.getContact(op.param2).displayName
-                            Name = dna9.getContact(op.param2).displayName
                             if Name in cctv['sidermem'][op.param1]:
                                 pass
                             else:
@@ -1814,11 +1801,11 @@ def ririnBot(op):
                                 if " " in Name:
                                     nick = Name.split(' ')
                                     if len(nick) == 2:
-                                        random.choice(KAC).sendText(op.param1, "ᴡᴏʏ " + "☞ " + Name + " ☜" + "\nᴅɪᴇᴍ ᴅɪᴇᴍ ʙᴀᴇ...\nsɪɴɪ ɪᴋᴜᴛ ɴɢᴏᴘɪ  ")
+                                        ririn.sendMessage(op.param1, "ᴡᴏʏ " + "☞ " + Name + " ☜" + "\nᴅɪᴇᴍ ᴅɪᴇᴍ ʙᴀᴇ...\nsɪɴɪ ɪᴋᴜᴛ ɴɢᴏᴘɪ  ")
                                     else:
-                                        random.choice(KAC).sendText(op.param1, "ᴍʙʟᴏ " + "☞ " + Name + " ☜" + "\nɴɢɪɴᴛɪᴘ ᴅᴏᴀɴɢ ʟᴜ\nsɪɴɪ ɢᴀʙᴜɴɢ  ")
+                                        ririn.sendMessage(op.param1, "ᴍʙʟᴏ " + "☞ " + Name + " ☜" + "\nɴɢɪɴᴛɪᴘ ᴅᴏᴀɴɢ ʟᴜ\nsɪɴɪ ɢᴀʙᴜɴɢ  ")
                                 else:
-                                    random.choice(KAC).sendText(op.param1, "ᴛᴏɴɢ " + "☞ " + Name + " ☜" + "\nɴɢᴀᴘᴀɪɴ ʟᴜ...\nɢᴀʙᴜɴɢ ᴄʜᴀᴛ sɪɴɪ")
+                                    ririn.sendMessage(op.param1, "ᴛᴏɴɢ " + "☞ " + Name + " ☜" + "\nɴɢᴀᴘᴀɪɴ ʟᴜ...\nɢᴀʙᴜɴɢ ᴄʜᴀᴛ sɪɴɪ")
                         else:
                             pass
                     else:
