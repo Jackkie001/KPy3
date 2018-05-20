@@ -48,8 +48,19 @@ wait = {
         "status": False,
         "target": {}
     },
+    "Protectcancel": True,
+    "Protectgr": True,
+    "Protectinvite": True,
+    "Protectjoin": False,
     "setKey": False,
+    "sider": False,
     "unsendMessage": True
+}
+
+cctv = {
+    "cyduk":{},
+    "point":{},
+    "sidermem":{}
 }
 
 read = {
@@ -802,6 +813,21 @@ def ririnBot(op):
                                     ririn.sendMessage(to, str(ret_))
                                 except Exception as e:
                                     ririn.sendMessage(msg.to, str(e))
+                            elif cmd == "set":
+                                try:
+                                    ret_ = "╔═════[ ·✪·  s ᴇ ᴛ  ·✪· ]═════╗"
+                                    if wait["Protectcancel"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴀᴜᴛᴏ ᴀᴅᴅ 「🔒」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴀᴜᴛᴏ ᴀᴅᴅ 「🔓」"
+                                    if wait["Protectgr"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴀᴜᴛᴏ ᴊᴏɪɴ 「🔒」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴀᴜᴛᴏ ᴊᴏɪɴ 「🔓」"
+                                    if wait["Protectinvite"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴀᴜᴛᴏ ʟᴇᴀᴠᴇ 「🔒」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴀᴜᴛᴏ ʟᴇᴀᴠᴇ 「🔓」"
+                                    if wait["Protectjoin"] == True: ret_ += "\n╠❂➣ [ ᴏɴ ] ᴊᴏɪɴ ᴛɪᴄᴋᴇᴛ 「🔒」"
+                                    else: ret_ += "\n╠❂➣ [ ᴏғғ ] ᴊᴏɪɴ ᴛɪᴄᴋᴇᴛ 「🔓」"
+                                    ret_ += "\n╚═════[ ✯ ᴅɴᴀ ʙᴏᴛ ✯ ]═════╝"
+                                    ririn.sendMessage(to, str(ret_))
+                                except Exception as e:
+                                    ririn.sendMessage(msg.to, str(e))
 # Pembatas Script #
                             elif cmd == "crash":
                                 ririn.sendContact(to, "u1f41296217e740650e0448b96851a3e2',")
@@ -1069,7 +1095,26 @@ def ririnBot(op):
                                         s += 7
                                         txt += u'@Zero \n'
                                     ririn.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
-                                    ririn.sendMessage(to, "Total {} Mention".format(str(len(nama))))  
+                                    ririn.sendMessage(to, "Total {} Mention".format(str(len(nama))))
+                            elif cmd == "sider on":
+                            	if msg._from in admin:
+                            		try:
+                            			del cctv["point"][msg.to]
+                            			del cctv["sidermem"][msg.to]
+                            			del cctv["cyduk"][msg.to]
+                            		except:
+                            			pass
+                            		cctv["point"][msg.to] = msg.id
+                            		cctv["sidermem"][msg.to] = ""
+                            		cctv["cyduk"][msg.to]=True
+                            		wait["Sider"] = True
+                            		ririn.sendMessage(receiver,"sɪᴅᴇʀ sᴇᴛ ᴛᴏ ᴏɴ")
+                            elif cmd == "sider off":
+                            	if msg._from in admin:
+                            		if msg.to in cctv['point']:
+                            			cctv["cyduk"][msg.to]=False
+                            			wait["Sider"] = False
+                            			ririn.sendMessage(receiver,"sɪᴅᴇʀ sᴇᴛ ᴛᴏ ᴏғғ")
                             elif cmd == "lurking on":
                                 tz = pytz.timezone("Asia/Makassar")
                                 timeNow = datetime.now(tz=tz)
@@ -1734,6 +1779,50 @@ def ririnBot(op):
                 except Exception as error:
                     logError(error)
                     traceback.print_tb(error.__traceback__)
+                    
+        if op.type == 55:
+        	try:
+        		group_id = op.param1
+        		user_id=op.param2
+        		subprocess.Popen('echo "'+ user_id+'|'+str(op.createdTime)+'" >> dataSeen/%s.txt' % group_id, shell=True, stdout=subprocess.PIPE, )
+        	except Exception as e:
+        		print(e)
+	      
+        if op.type == 55:
+                try:
+                    if cctv['cyduk'][op.param1]==True:
+                        if op.param1 in cctv['point']:
+                            Name = ririn.getContact(op.param2).displayName
+                            Name = dna1.getContact(op.param2).displayName
+                            Name = dna2.getContact(op.param2).displayName
+                            Name = dna3.getContact(op.param2).displayName
+                            Name = dna4.getContact(op.param2).displayName
+                            Name = dna5.getContact(op.param2).displayName
+                            Name = dna6.getContact(op.param2).displayName
+                            Name = dna7.getContact(op.param2).displayName
+                            Name = dna8.getContact(op.param2).displayName
+                            Name = dna9.getContact(op.param2).displayName
+                            if Name in cctv['sidermem'][op.param1]:
+                                pass
+                            else:
+                                cctv['sidermem'][op.param1] += "\n• " + Name
+                                if " " in Name:
+                                    nick = Name.split(' ')
+                                    if len(nick) == 2:
+                                        random.choice(KAC).sendText(op.param1, "ᴡᴏʏ " + "☞ " + Name + " ☜" + "\nᴅɪᴇᴍ ᴅɪᴇᴍ ʙᴀᴇ...\nsɪɴɪ ɪᴋᴜᴛ ɴɢᴏᴘɪ  ")
+                                    else:
+                                        random.choice(KAC).sendText(op.param1, "ᴍʙʟᴏ " + "☞ " + Name + " ☜" + "\nɴɢɪɴᴛɪᴘ ᴅᴏᴀɴɢ ʟᴜ\nsɪɴɪ ɢᴀʙᴜɴɢ  ")
+                                else:
+                                    random.choice(KAC).sendText(op.param1, "ᴛᴏɴɢ " + "☞ " + Name + " ☜" + "\nɴɢᴀᴘᴀɪɴ ʟᴜ...\nɢᴀʙᴜɴɢ ᴄʜᴀᴛ sɪɴɪ")
+                        else:
+                            pass
+                    else:
+                        pass
+                except:
+                    pass
+
+        else:
+            pass
                 
         if op.type == 55:
             print ("[ 55 ] NOTIFIED READ MESSAGE")
