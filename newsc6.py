@@ -1807,13 +1807,13 @@ def ririnBot(op):
                                     nick = Name.split(' ')
                                     if len(nick) == 2:
                                     	ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}".format(contact.picturePath))
-                                        ririn.sendMessage(op.param1, "ᴡᴏʏ " + "☞ " + Name + " ☜" + "\nᴅɪᴇᴍ ᴅɪᴇᴍ ʙᴀᴇ...\nsɪɴɪ ɪᴋᴜᴛ ɴɢᴏᴘɪ  ")
+                                    	ririn.sendMessage(op.param1, "ᴡᴏʏ " + "☞ " + Name + " ☜" + "\nᴅɪᴇᴍ ᴅɪᴇᴍ ʙᴀᴇ...\nsɪɴɪ ɪᴋᴜᴛ ɴɢᴏᴘɪ  ")
                                     else:
                                     	ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}".format(contact.picturePath))
-                                        ririn.sendMessage(op.param1, "ᴍʙʟᴏ " + "☞ " + Name + " ☜" + "\nɴɢɪɴᴛɪᴘ ᴅᴏᴀɴɢ ʟᴜ\nsɪɴɪ ɢᴀʙᴜɴɢ  ")
+                                    	ririn.sendMessage(op.param1, "ᴍʙʟᴏ " + "☞ " + Name + " ☜" + "\nɴɢɪɴᴛɪᴘ ᴅᴏᴀɴɢ ʟᴜ\nsɪɴɪ ɢᴀʙᴜɴɢ  ")
                                 else:
                                 	ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}".format(contact.picturePath))
-                                    ririn.sendMessage(op.param1, "ᴛᴏɴɢ " + "☞ " + Name + " ☜" + "\nɴɢᴀᴘᴀɪɴ ʟᴜ...\nɢᴀʙᴜɴɢ ᴄʜᴀᴛ sɪɴɪ")
+                                	ririn.sendMessage(op.param1, "ᴛᴏɴɢ " + "☞ " + Name + " ☜" + "\nɴɢᴀᴘᴀɪɴ ʟᴜ...\nɢᴀʙᴜɴɢ ᴄʜᴀᴛ sɪɴɪ")
                         else:
                             pass
                     else:

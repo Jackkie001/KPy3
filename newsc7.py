@@ -1807,13 +1807,13 @@ def ririnBot(op):
                                     nick = Name.split(' ')
                                     if len(nick) == 2:
                                     	ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}".format(contact.picturePath))
-                                    	ririn.sendMention(op.param1, "ᴡᴏʏ " + "☞ @! ☜" + "\nᴅɪᴇᴍ ᴅɪᴇᴍ ʙᴀᴇ...\nsɪɴɪ ɪᴋᴜᴛ ɴɢᴏᴘɪ  ")
+                                    	ririn.sendMention(op.param1, "ᴡᴏʏ ☞ @! ☜ \nᴅɪᴇᴍ ᴅɪᴇᴍ ʙᴀᴇ...\nsɪɴɪ ɪᴋᴜᴛ ɴɢᴏᴘɪ", [op.param2])
                                     else:
                                     	ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}".format(contact.picturePath))
-                                    	ririn.sendMessage(op.param1, "ᴍʙʟᴏ " + "☞ @! ☜" + "\nɴɢɪɴᴛɪᴘ ᴅᴏᴀɴɢ ʟᴜ\nsɪɴɪ ɢᴀʙᴜɴɢ  ")
+                                    	ririn.sendMessage(op.param1, "ᴍʙʟᴏ ☞ @! ☜ \nɴɢɪɴᴛɪᴘ ᴅᴏᴀɴɢ ʟᴜ\nsɪɴɪ ɢᴀʙᴜɴɢ", [op.param2])
                                 else:
                                 	ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}".format(contact.picturePath))
-                                	ririn.sendMessage(op.param1, "ᴛᴏɴɢ " + "☞ @! ☜" + "\nɴɢᴀᴘᴀɪɴ ʟᴜ...\nɢᴀʙᴜɴɢ ᴄʜᴀᴛ sɪɴɪ")
+                                	ririn.sendMessage(op.param1, "ᴛᴏɴɢ ☞ @! ☜ \nɴɢᴀᴘᴀɪɴ ʟᴜ...\nɢᴀʙᴜɴɢ ᴄʜᴀᴛ sɪɴɪ", [op.param2])
                         else:
                             pass
                     else:
