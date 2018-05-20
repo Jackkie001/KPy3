@@ -1797,8 +1797,6 @@ def ririnBot(op):
                 try:
                     if cctv['cyduk'][op.param1]==True:
                         if op.param1 in cctv['point']:
-                            Name = ririn.getContact(op.param2).displayName
-                            contact = ririn.getContact(op.param2)
                             if Name in cctv['sidermem'][op.param1]:
                                 pass
                             else:
