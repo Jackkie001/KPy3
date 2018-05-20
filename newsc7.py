@@ -1798,6 +1798,7 @@ def ririnBot(op):
                     if cctv['cyduk'][op.param1]==True:
                         if op.param1 in cctv['point']:
                             Name = ririn.getContact(op.param2).displayName
+                            contact = ririn.getContact(op.param2)
                             if Name in cctv['sidermem'][op.param1]:
                                 pass
                             else:
@@ -1805,11 +1806,14 @@ def ririnBot(op):
                                 if " " in Name:
                                     nick = Name.split(' ')
                                     if len(nick) == 2:
-                                        ririn.sendMessage(op.param1, "ᴡᴏʏ " + "☞ " + Name + " ☜" + "\nᴅɪᴇᴍ ᴅɪᴇᴍ ʙᴀᴇ...\nsɪɴɪ ɪᴋᴜᴛ ɴɢᴏᴘɪ  ")
+                                    	ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}".format(contact.picturePath))
+                                    	ririn.sendMention(op.param1, "ᴡᴏʏ " + "☞ @! ☜" + "\nᴅɪᴇᴍ ᴅɪᴇᴍ ʙᴀᴇ...\nsɪɴɪ ɪᴋᴜᴛ ɴɢᴏᴘɪ  ")
                                     else:
-                                        ririn.sendMessage(op.param1, "ᴍʙʟᴏ " + "☞ " + Name + " ☜" + "\nɴɢɪɴᴛɪᴘ ᴅᴏᴀɴɢ ʟᴜ\nsɪɴɪ ɢᴀʙᴜɴɢ  ")
+                                    	ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}".format(contact.picturePath))
+                                    	ririn.sendMessage(op.param1, "ᴍʙʟᴏ " + "☞ @! ☜" + "\nɴɢɪɴᴛɪᴘ ᴅᴏᴀɴɢ ʟᴜ\nsɪɴɪ ɢᴀʙᴜɴɢ  ")
                                 else:
-                                    ririn.sendMessage(op.param1, "ᴛᴏɴɢ " + "☞ " + Name + " ☜" + "\nɴɢᴀᴘᴀɪɴ ʟᴜ...\nɢᴀʙᴜɴɢ ᴄʜᴀᴛ sɪɴɪ")
+                                	ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}".format(contact.picturePath))
+                                	ririn.sendMessage(op.param1, "ᴛᴏɴɢ " + "☞ @! ☜" + "\nɴɢᴀᴘᴀɪɴ ʟᴜ...\nɢᴀʙᴜɴɢ ᴄʜᴀᴛ sɪɴɪ")
                         else:
                             pass
                     else:
