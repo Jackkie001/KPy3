@@ -19,6 +19,11 @@ ririnSettings = ririn.getSettings()
 ririnPoll = OEPoll(ririn)
 botStart = time.time()
 
+Bots=[mid]
+admin=["ueca4120a9d7b0e4a9e7f4f1b1b96a436","u40d66b1f1c5ce30fdce9507a73247ef1","uc2d366327a79c98701b0b8bd9e08c0c9","ubcce0f23f428d75703fb33ee06c083b6","ubd3c3fa2c0128918d5b484caa42f9fee","u6fc2dc5f5f0d0fc6a4d2e92626afb742"]
+Owner=["ueca4120a9d7b0e4a9e7f4f1b1b96a436"]
+creator=["ueca4120a9d7b0e4a9e7f4f1b1b96a436"]
+
 print ("╔═════════════════════════\n║╔════════════════════════\n║╠❂➣ DNA BERHASIL LOGIN\n║╚════════════════════════\n╚═════════════════════════")
 
 msg_dict = {}
