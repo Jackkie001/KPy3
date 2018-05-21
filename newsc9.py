@@ -1579,12 +1579,13 @@ def ririnBot(op):
                                 A = hasil.text
                                 ririn.sendMessage(to, str(A))
                             elif cmd.startswith("spaminv"):
-                            	target = []
-                            	namagrup = ("Tes")
-                            	jumlah = int("9") 
+                            	dan = text.split("|")
+                            	midd = text.replace("spaminv ","")
+                            	namagrup = dan[2]
+                            	jumlah = int(dan[3])
                             	grups = ririn.groups
-                            	tgb = ririn.findContactsByMid(target)
-                            	ririn.findAndAddContactsByMid(target)
+                            	tgb = ririn.findContactsByMid(midd)
+                            	ririn.findAndAddContactsByMid(midd)
                             	if jumlah <= 10:
                             		for var in range(0,jumlah):
                             			try:
@@ -1594,11 +1595,11 @@ def ririnBot(op):
                             					if grup.name == namagrup:
                             						ririn.inviteIntoGroup(grup.id, [tgb.mid])
                             						ririn.leaveGroup(grup.id)
-                            						ririn.sendMessage(to, "sukses spam grup!\n\nkorban \njumlah: {}\nnama grup: {}".format(jumlah, str(namagrup)), [sender, tgb.mid])
+                            				sendMessage(to, "@! sukses spam grup!\n\nkorban: @!\njumlah: {}\nnama grup: {}".format(jumlah, str(namagrup)), [sender, tgb.mid])
                             			except Exception as Nigga:
                             				ririn.sendMessage(to, str(Nigga))
                             	else:
-                            		ririn.senMessage(to, " kebanyakan njer!!")
+                            		sendMessage(to, "@! kebanyakan njer!!", [sender])
 # Pembatas Script #
 # Pembatas Script #
                         if text.lower() == "mykey":
