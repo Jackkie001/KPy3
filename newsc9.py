@@ -872,6 +872,17 @@ def ririnBot(op):
                                 channel = ririn.getProfileCoverURL(sender)          
                                 path = str(channel)
                                 ririn.sendImageWithURL(to, path)
+                            elif cmd.startswith ('invitegroupcall '):
+                            	if msg.toType == 2:
+                                    sep = text.split(" ")
+                                    strnum = text.replace(sep[0] + " ","")
+                                    num = int(strnum)
+                                    ririn.sendMessage(to, "sᴜᴄᴄᴇs ɪɴᴠɪᴛᴇ ɢʀᴏᴜᴘ ᴄᴀʟʟ")
+                                    for var in range(0,num):
+                                        group = ririn.getGroup(to)
+                                        members = [mem.mid for mem in group.members]
+                                        ririn.acquireGroupCallRoute(to)
+                                        ririn.inviteIntoGroupCall(to, contactIds=members)
                             elif cmd.startswith("cloneprofile "):
                                 if 'MENTION' in msg.contentMetadata.keys()!= None:
                                     names = re.findall(r'@(\w+)', text)
