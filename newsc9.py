@@ -1578,28 +1578,6 @@ def ririnBot(op):
                                 hasil = translator.translate(say, dest=lang)
                                 A = hasil.text
                                 ririn.sendMessage(to, str(A))
-                            elif cmd.startswith("spaminv"):
-                            	contact = ririn.getContact(msg.contentMetadata["mid"])
-                            	dan = text.split("|")
-                            	midd = dan[1]
-                            	namagrup = dan[1]
-                            	jumlah = int(dan[2])
-                            	grups = ririn.groups
-                            	ririn.findAndAddContactsByMid(midd)
-                            	if jumlah <= 999:
-                            		for var in range(0,jumlah):
-                            			try:
-                            				line.createGroup(str(namagrup), [midd])
-                            				for i in grups:
-                            					grup = ririn.getGroup(i)
-                            					if grup.name == namagrup:
-                            						ririn.inviteIntoGroup(grup.id, [tgb.mid])
-                            						ririn.leaveGroup(grup.id)
-                            				ririn.sendMessage(to, "@! sukses spam grup!\n\nkorban: @!\njumlah: {}\nnama grup: {}".format(jumlah, str(namagrup)), [sender, tgb.midd])
-                            			except Exception as Nigga:
-                            				ririn.sendMessage(to, str(Nigga))
-                            	else:
-                            		sendMessage(to, "@! kebanyakan njer!!", [sender])
 # Pembatas Script #
 # Pembatas Script #
                         if text.lower() == "mykey":
