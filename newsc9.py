@@ -626,7 +626,7 @@ def ririnBot(op):
             print ("[ 5 ] Add Contact")
             if wait["autoAdd"] == True:
                 ririn.findAndAddContactsByMid(op.param1)
-            ririn.sendMessage(to, "Halo, ᴛʜᴀɴᴋs ғᴏʀ ᴀᴅᴅ ᴍᴇ \nᴅɴᴀ ʙᴏᴛ \nᴏᴘᴇɴ ᴏʀᴅᴇʀ sᴇʟғʙᴏᴛ ᴏɴʟʏ\nsᴇʟғʙᴏᴛ + ᴀssɪsᴛ\nʙᴏᴛ ᴘʀᴏᴛᴇᴄᴛ\nᴀʟʟ ʙᴏᴛ ᴘʏᴛʜᴏɴ з \nᴍɪɴᴀᴛ ᴘᴄ ᴀᴋᴜɴ ᴅɪ ʙᴀᴡᴀʜ \nᴄʀᴇᴀᴛᴏʀ line.me/ti/p/ppgIZ0JLDW")
+            ririn.sendMessage(op.param1, "╔════════════════════╗\n                   「ᴀᴜᴛᴏ ʀᴇᴘʟʏ」\n                             ʙʏ:\n                    ✰ ᴅɴᴀ ʙᴏᴛ ✰\n╚════════════════════╝\n       ʜᴀʟʟᴏ, ᴛʜᴀɴᴋs ғᴏʀ ᴀᴅᴅ ᴍᴇ\n\n                    ᴏᴘᴇɴ ᴏʀᴅᴇʀ :\n               ✪ sᴇʟғʙᴏᴛ ᴏɴʟʏ ✪\n            ✪ sᴇʟғʙᴏᴛ + ᴀssɪsᴛ ✪\n                ✪ ʙᴏᴛ ᴘʀᴏᴛᴇᴄᴛ ✪\n              「ᴀʟʟ ʙᴏᴛ ᴘʏᴛʜᴏɴ з」\n\n         ᴍɪɴᴀᴛ ᴘᴄ ᴀᴋᴜɴ ᴅɪ ʙᴀᴡᴀʜ :\n        [line.me/ti/p/ppgIZ0JLDW]")
 
         if op.type == 13:
             print ("[ 13 ] Invite Into Group")
