@@ -1,7 +1,6 @@
 ## DnA Bot LinePy
 
-#Install di termux:
-
+# Install di termux:
 - pkg install python3 
 - pkg install pip3 
 - pkg install git 
@@ -11,11 +10,9 @@
 - pip3 install humanfriendly
 - pip3 install requests 
 - cd Rin
-- python3 dna.py
+- python3 rinself.py
 
-
-#Install di c9: 
-
+# Install di c9: 
 - apt update 
 - apt install git 
 - apt install python3 
@@ -25,16 +22,13 @@
 - pip3 install requests 
 - pip3 install humanfriendly 
 - git clone https://github.com/Dee-n-a/Rin
-- cd protectpy3 
-- python3 protectpy3.py 
+- cd Rin
+- python3 rinself.py 
 
-
-#Credit By Dee 
+# Credit By Dee 
 - Add My ID LINE : 〘 https://line.me/ti/p/ppgIZ0JLDW 〙
 
-
-
-#Special Thx : 
+# Special Thx : 
 - Ghost Team
 - BotEater
 - HELLO-WORLD
