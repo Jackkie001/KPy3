@@ -1416,4 +1416,236 @@ if op.type == 17:
                                   wait["invite"] = False
                                   break
                                     
-                                    
+                                    if msg.contentType == 13:
+                 if msg._from in admin:
+                  if wait["addbots"] == True:
+                    if msg.contentMetadata["mid"] in Bots:
+                        cl.sendMessage(msg.to,"Contact itu sudah jadi anggota bot")
+                        wait["addbots"] = True
+                    else:
+                        Bots.append(msg.contentMetadata["mid"])
+                        wait["addbots"] = True
+                        cl.sendMessage(msg.to,"Berhasil menambahkan ke anggota bot")
+                 if wait["dellbots"] == True:
+                    if msg.contentMetadata["mid"] in Bots:
+                        Bots.remove(msg.contentMetadata["mid"])
+                        cl.sendMessage(msg.to,"Berhasil menghapus dari anggota bot")
+                    else:
+                        wait["dellbots"] = True
+                        cl.sendMessage(msg.to,"Contact itu bukan anggota bot saints")
+#ADD STAFF
+                 if msg._from in admin:
+                  if wait["addstaff"] == True:
+                    if msg.contentMetadata["mid"] in staff:
+                        cl.sendMessage(msg.to,"Contact itu sudah jadi staff")
+                        wait["addstaff"] = True
+                    else:
+                        staff.append(msg.contentMetadata["mid"])
+                        wait["addstaff"] = True
+                        cl.sendMessage(msg.to,"Berhasil menambahkan ke staff")
+                 if wait["dellstaff"] == True:
+                    if msg.contentMetadata["mid"] in staff:
+                        staff.remove(msg.contentMetadata["mid"])
+                        cl.sendMessage(msg.to,"Berhasil menghapus dari staff")
+                        wait["dellstaff"] = True
+                    else:
+                        wait["dellstaff"] = True
+                        cl.sendMessage(msg.to,"Contact itu bukan staff")
+#ADD ADMIN
+                 if msg._from in admin:
+                  if wait["addadmin"] == True:
+                    if msg.contentMetadata["mid"] in admin:
+                        cl.sendMessage(msg.to,"Contact itu sudah jadi admin")
+                        wait["addadmin"] = True
+                    else:
+                        admin.append(msg.contentMetadata["mid"])
+                        wait["addadmin"] = True
+                        cl.sendMessage(msg.to,"Berhasil menambahkan ke admin")
+                 if wait["delladmin"] == True:
+                    if msg.contentMetadata["mid"] in admin:
+                        admin.remove(msg.contentMetadata["mid"])
+                        cl.sendMessage(msg.to,"Berhasil menghapus dari admin")
+                    else:
+                        wait["delladmin"] = True
+                        cl.sendMessage(msg.to,"Contact itu bukan admin")
+#ADD BLACKLIST
+                 if msg._from in admin:
+                  if wait["wblacklist"] == True:
+                    if msg.contentMetadata["mid"] in wait["blacklist"]:
+                        cl.sendMessage(msg.to,"Contact itu sudah ada di blacklist")
+                        wait["wblacklist"] = True
+                    else:
+                        wait["blacklist"][msg.contentMetadata["mid"]] = True
+                        wait["wblacklist"] = True
+                        cl.sendMessage(msg.to,"Berhasil menambahkan ke blacklist user")
+                  if wait["dblacklist"] == True:
+                    if msg.contentMetadata["mid"] in wait["blacklist"]:
+                        del wait["blacklist"][msg.contentMetadata["mid"]]
+                        cl.sendMessage(msg.to,"Berhasil menghapus dari blacklist user")
+                    else:
+                        wait["dblacklist"] = True
+                        cl.sendMessage(msg.to,"Contact itu tidak ada di blacklist")
+#TALKBAN
+                 if msg._from in admin:
+                  if wait["Talkwblacklist"] == True:
+                    if msg.contentMetadata["mid"] in wait["Talkblacklist"]:
+                        cl.sendMessage(msg.to,"Contact itu sudah ada di Talkban")
+                        wait["Talkwblacklist"] = True
+                    else:
+                        wait["Talkblacklist"][msg.contentMetadata["mid"]] = True
+                        wait["Talkwblacklist"] = True
+                        cl.sendMessage(msg.to,"Berhasil menambahkan ke Talkban user")
+                  if wait["Talkdblacklist"] == True:
+                    if msg.contentMetadata["mid"] in wait["Talkblacklist"]:
+                        del wait["Talkblacklist"][msg.contentMetadata["mid"]]
+                        cl.sendMessage(msg.to,"Berhasil menghapus dari Talkban user")
+                    else:
+                        wait["Talkdblacklist"] = True
+                        cl.sendMessage(msg.to,"Contact itu tidak ada di Talkban")
+#UPDATE FOTO
+               if msg.contentType == 1:
+                 if msg._from in admin:
+                    if wait["Addimage"]["status"] == True:
+                        path = cl.downloadObjectMsg(msg.id)
+                        images[wait["Addimage"]["name"]] = str(path)
+                        f = codecs.open("image.json","w","utf-8")
+                        json.dump(images, f, sort_keys=True, indent=4, ensure_ascii=False)
+                        cl.sendMessage(msg.to, "Berhasil menambahkan gambar {}".format(str(wait["Addimage"]["name"])))
+                        wait["Addimage"]["status"] = False                
+                        wait["Addimage"]["name"] = ""
+               if msg.contentType == 2:
+                 if msg._from in admin:
+                    if wait["Addvideo"]["status"] == True:
+                        path = cl.downloadObjectMsg(msg.id)
+                        videos[wait["Addvideo"]["name"]] = str(path)
+                        f = codecs.open("video.json","w","utf-8")
+                        json.dump(videos, f, sort_keys=True, indent=4, ensure_ascii=False)
+                        cl.sendMessage(msg.to, "Berhasil menambahkan video {}".format(str(wait["Addvideo"]["name"])))
+                        wait["Addvideo"]["status"] = False                
+                        wait["Addvideo"]["name"] = ""
+               if msg.contentType == 7:
+                 if msg._from in admin:
+                    if wait["Addsticker"]["status"] == True:
+                        stickers[wait["Addsticker"]["name"]] = {"STKID":msg.contentMetadata["STKID"],"STKPKGID":msg.contentMetadata["STKPKGID"]}
+                        f = codecs.open("sticker.json","w","utf-8")
+                        json.dump(stickers, f, sort_keys=True, indent=4, ensure_ascii=False)
+                        cl.sendMessage(msg.to, "Berhasil menambahkan sticker {}".format(str(wait["Addsticker"]["name"])))
+                        wait["Addsticker"]["status"] = False                
+                        wait["Addsticker"]["name"] = ""
+               if msg.contentType == 3:
+                 if msg._from in admin:
+                    if wait["Addaudio"]["status"] == True:
+                        path = cl.downloadObjectMsg(msg.id)
+                        audios[wait["Addaudio"]["name"]] = str(path)
+                        f = codecs.open("audio.json","w","utf-8")
+                        json.dump(audios, f, sort_keys=True, indent=4, ensure_ascii=False)
+                        cl.sendMessage(msg.to, "Berhasil menambahkan mp3 {}".format(str(wait["Addaudio"]["name"])))
+                        wait["Addaudio"]["status"] = False                
+                        wait["Addaudio"]["name"] = ""
+               if msg.toType == 2:
+                 if msg._from in admin:
+                   if settings["groupPicture"] == True:
+                     path = cl.downloadObjectMsg(msg_id)
+                     settings["groupPicture"] = False
+                     cl.updateGroupPicture(msg.to, path)
+                     cl.sendMessage(msg.to, "Berhasil mengubah foto group")
+               if msg.contentType == 1:
+                   if msg._from in admin:
+                       if mid in Setmain["RAfoto"]:
+                            path = cl.downloadObjectMsg(msg_id)
+                            del Setmain["RAfoto"][mid]
+                            cl.updateProfilePicture(path)
+                            cl.sendMessage(msg.to,"Foto berhasil dirubah")
+               if msg.contentType == 2:
+                   if msg._from in admin:
+                       if mid in Setmain["RAvideo"]:
+                            path = cl.downloadObjectMsg(msg_id)
+                            del Setmain["RAvideo"][mid]
+                            cl.updateProfileVideoPicture(path)
+                            cl.sendMessage(msg.to,"Foto berhasil dirubah jadi video")
+               if msg.contentType == 1:
+                 if msg._from in admin:
+                        if Amid in Setmain["RAfoto"]:
+                            path = ki.downloadObjectMsg(msg_id)
+                            del Setmain["RAfoto"][Amid]
+                            ki.updateProfilePicture(path)
+                            ki.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Bmid in Setmain["RAfoto"]:
+                            path = kk.downloadObjectMsg(msg_id)
+                            del Setmain["RAfoto"][Bmid]
+                            kk.updateProfilePicture(path)
+                            kk.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Cmid in Setmain["RAfoto"]:
+                            path = kc.downloadObjectMsg(msg_id)
+                            del Setmain["RAfoto"][Cmid]
+                            kc.updateProfilePicture(path)
+                            kc.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Dmid in Setmain["RAfoto"]:
+                            path = km.downloadObjectMsg(msg_id)
+                            del Setmain["RAfoto"][Dmid]
+                            km.updateProfilePicture(path)
+                            km.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Emid in Setmain["RAfoto"]:
+                            path = kb.downloadObjectMsg(msg_id)
+                            del Setmain["RAfoto"][Emid]
+                            kb.updateProfilePicture(path)
+                            kb.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Zmid in Setmain["RAfoto"]:
+                            path = sw.downloadObjectMsg(msg_id)
+                            del Setmain["RAfoto"][Zmid]
+                            sw.updateProfilePicture(path)
+                            sw.sendMessage(msg.to,"Foto berhasil dirubah")
+               if msg.contentType == 1:
+                 if msg._from in admin:
+                   if settings["changePicture"] == True:
+                     path1 = ki.downloadObjectMsg(msg_id)
+                     path2 = kk.downloadObjectMsg(msg_id)
+                     path3 = kc.downloadObjectMsg(msg_id)
+                     path4 = km.downloadObjectMsg(msg_id)
+                     path5 = kb.downloadObjectMsg(msg_id)
+                     settings["changePicture"] = False
+                     ki.updateProfilePicture(path1)
+                     ki.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
+                     kk.updateProfilePicture(path2)
+                     kk.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
+                     kc.updateProfilePicture(path3)
+                     kc.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
+                     km.updateProfilePicture(path4)
+                     km.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
+                     kb.updateProfilePicture(path5)
+                     kb.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
+               if msg.contentType == 0:
+                 if Setmain["autoRead"] == True:
+                     cl.sendChatChecked(msg.to, msg_id)
+                 if text is None:
+                     return
+                 else:
+                        for sticker in stickers:
+                         if msg._from in admin:
+                           if text.lower() == sticker:
+                              sid = stickers[text.lower()]["STKID"]
+                              spkg = stickers[text.lower()]["STKPKGID"]
+                              cl.sendSticker(to, spkg, sid)
+                        for image in images:
+                         if msg._from in admin:
+                           if text.lower() == image:
+                              cl.sendImage(msg.to, images[image])
+                        for audio in audios:
+                         if msg._from in admin:
+                           if text.lower() == audio:
+                              cl.sendAudio(msg.to, audios[audio])
+                        for video in videos:
+                         if msg._from in admin:
+                           if text.lower() == video:
+                              cl.sendVideo(msg.to, videos[video])
+                        cmd = command(text)
+                        if cmd == "self on":
+                            if msg._from in admin:
+                                wait["selfbot"] = True
+                                cl.sendText(msg.to, "Selfbot diaktifkan")
+                                
+                        elif cmd == "self off":
+                            if msg._from in admin:
+                                wait["selfbot"] = False
+                                cl.sendText(msg.to, "Selfbot dinonaktifkan")
+                                      
