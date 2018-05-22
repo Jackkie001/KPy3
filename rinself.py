@@ -11,7 +11,7 @@ from googletrans import Translator
 from humanfriendly import format_timespan, format_size, format_number, format_length
 import time, random, sys, json, codecs, threading, glob, re, string, os, requests, six, ast, pytz, urllib, urllib3, urllib.parse, traceback, atexit, subprocess
 
-ririn = LINE("EtAMLgb0zoJwV5h2ESr6.7kqscP17dKQEF08Bg5AKnG.LkvtwSoDccEW4SQQb9rQh1/2dUXRv11BQfcebyDgolg=")
+ririn = LINE("EtAMLgb0zoJwV5h2ESr6.7kqscP17dKQEF08Bg5AKnG.LkvtwSoDccEW4SQQb9rQh1/2dUXRv11BQfcebyDgolg='''''")
 #ririn = LINE("TOKENMU")
 
 ririnMid = ririn.profile.mid
@@ -653,19 +653,6 @@ def ririnBot(op):
                 ririn.sendMessage(op.param1, "ʜᴀʟᴏ, ᴛʜx ғᴏʀ ɪɴᴠɪᴛᴇ ᴍᴇ")
                 ririn.sendContact(op.param1, op.param2)
                 ririn.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
-                
-        if op.type == 13:
-            print ("[ 13 ] invite Info Group and Kick Pelaku")
-            if ririnMid in op.param3:
-                if wait["autoLeave"] == True:
-                	ririn.acceptGroupInvitation(op.param1)
-                dan = ririn.getContact(op.param2)
-                tgb = ririn.getGroup(op.param1)
-                ririn.sendMessage(op.param1, "ᴡᴏʏ ᴋɴᴛʟᴏ,\nɴɢᴀᴘᴀɪɴ ɪɴᴠɪᴛᴇ ɢᴡ")
-                ririn.sendContact(op.param1, op.param2)
-                ririn.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
-                ririn.kickoutFromGroup(op.param1, op.param2)
-                ririn.leaveRoom(op.param1)
                 
         if op.type == 15:
         	dan = ririn.getContact(op.param2)
