@@ -341,6 +341,11 @@ def logError(text):
     time = "{}, {} - {} - {} | {}".format(str(hasil), str(inihari.strftime('%d')), str(bln), str(inihari.strftime('%Y')), str(inihari.strftime('%H:%M:%S')))
     with open("logError.txt","a") as error:
         error.write("\n[ {} ] {}".format(str(time), text))
+def waktu(secs):
+    mins, secs = divmod(secs,60)
+    hours, mins = divmod(mins,60)
+    days, hours = divmod(hours, 24)
+    return '%02d Hari %02d Jam %02d Menit %02d Detik' % (days, hours, mins, secs)
 
 def cTime_to_datetime(unixtime):
     return datetime.fromtimestamp(int(str(unixtime)[:len(str(unixtime))-3]))
@@ -382,6 +387,111 @@ def sendMention(to, text="", mids=[]):
         arr.append(arrData)
         textx += mention + str(text)
     cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+def mentionMembers(to, mid):
+    try:
+        arrData = ""
+        ginfo = cl.getGroup(to)
+        textx = "「 Daftar Member 」\n\n1. "
+        arr = []
+        no = 1
+        for i in mid:
+            mention = "@x\n"
+            slen = str(len(textx))
+            elen = str(len(textx) + len(mention) - 1)
+            arrData = {'S':slen, 'E':elen, 'M':i}
+            arr.append(arrData)
+            textx += mention
+            if no < len(mid):
+                no += 1
+                textx += "「✭」{}. ".format(str(no))
+            else:
+                textx += "\n「 Total {} Member 」".format(str(len(mid)))
+        cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    except Exception as error:
+        cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
+           
+def siderMembers(to, mid):
+    try:
+        arrData = ""
+        textx = "「 Tukang {} Sider 」\nHaii ".format(str(len(mid)))
+        arr = []
+        no = 1
+        num = 2
+        for i in mid:
+            mention = "@x\n"
+            slen = str(len(textx))
+            elen = str(len(textx) + len(mention) - 1)
+            arrData = {'S':slen, 'E':elen, 'M':i}
+            arr.append(arrData)
+            textx += mention+wait["mention"]
+            if no < len(mid):
+                no += 1
+                textx += "%i. " % (num)
+                num=(num+1)
+            else:
+                try:
+                    no = "\n╚══[ {} ]".format(str(cl.getGroup(to).name))
+                except:
+                    no = "\n╚══[ Success ]"
+        cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    except Exception as error:
+        cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
+
+def welcomeMembers(to, mid):
+    try:
+        arrData = ""
+        textx = "「 Auto Welcome 」\nHallo ".format(str(len(mid)))
+        arr = []
+        no = 1
+        num = 2
+        for i in mid:
+            ginfo = cl.getGroup(to)
+            mention = "@x\n"
+            slen = str(len(textx))
+            elen = str(len(textx) + len(mention) - 1)
+            arrData = {'S':slen, 'E':elen, 'M':i}
+            arr.append(arrData)
+            textx += mention+wait["welcome"]+" Di "+str(ginfo.name)
+            if no < len(mid):
+                no += 1
+                textx += "%i " % (num)
+                num=(num+1)
+            else:
+                try:
+                    no = "\n╚══[ {} ]".format(str(cl.getGroup(to).name))
+                except:
+                    no = "\n╚══[ Success ]"
+        cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    except Exception as error:
+        cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
+
+def leaveMembers(to, mid):
+    try:
+        arrData = ""
+        textx = "「 Respon Leave 」\nBaper Ya Kak ".format(str(len(mid)))
+        arr = []
+        no = 1
+        num = 2
+        for i in mid:
+            ginfo = cl.getGroup(to)
+            mention = "@x\n"
+            slen = str(len(textx))
+            elen = str(len(textx) + len(mention) - 1)
+            arrData = {'S':slen, 'E':elen, 'M':i}
+            arr.append(arrData)
+            textx += mention+wait["leave"]
+            if no < len(mid):
+                no += 1
+                textx += "%i " % (num)
+                num=(num+1)
+            else:
+                try:
+                    no = "\n╚══[ {} ]".format(str(cl.getGroup(to).name))
+                except:
+                    no = "\n╚══[ Success ]"
+        cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    except Exception as error:
+        cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
 
 def command(text):
     pesan = text.lower()
