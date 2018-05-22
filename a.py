@@ -18,6 +18,15 @@ ririnMid = cl.profile.mid
 ririnProfile = cl.getProfile()
 ririnSettings = cl.getSettings()
 ririnPoll = OEPoll(cl)
+call = LineCall(cl)
+creator = ["ue4341206714a63166f6540501005a5d9"]
+owner = ["ue4341206714a63166f6540501005a5d9"]
+admin = ["ue4341206714a63166f6540501005a5d9"]
+staff = ["ue4341206714a63166f6540501005a5d9"]
+KAC = [cl]
+#ABC = [ki,kk,kc,km,kb]
+Bots = [mid]
+Saints = admin + staff
 botStart = time.time()
 
 print ("╔═════════════════════════\n║╔════════════════════════\n║╠❂➣ DNA BERHASIL LOGIN\n║╚════════════════════════\n╚═════════════════════════")
@@ -25,20 +34,78 @@ print ("╔═══════════════════════
 msg_dict = {}
 
 wait = {
-    "autoAdd": True,
-    "autoJoin": True,
-    "autoLeave": False,
-    "autoRead": False,
-    "autoRespon": True,
-    "autoResponPc": False,
-    "autoJoinTicket": True,
-    "checkContact": False,
-    "checkPost": False,
-    "checkSticker": False,
+   # "autoAdd": True,
+   # "autoJoin": True,
+   # "autoLeave": False,
+  #  "autoRead": False,
+  #  "autoRespon": True,
+  #  "autoResponPc": False,
+   # "autoJoinTicket": True,
+  #  "checkContact": False,
+  #  "checkPost": False,
+  #  "checkSticker": False,
     "changePictureProfile": False,
     "changeGroupPicture": [],
     "keyCommand": "",
-    "leaveRoom": True,
+    #"leaveRoom": True,
+    "Limit": 1,
+    "owner":{},
+    "admin":{},
+    "addadmin":False,
+    "delladmin":False,
+    "staff":{},
+    "addstaff":False,
+    "dellstaff":False,
+    "bots":{},
+    "addbots":False,
+    "dellbots":False,
+    "blacklist":{},
+    "wblacklist":False,
+    "dblacklist":False,
+    "Talkblacklist":{},
+    "Talkwblacklist":False,
+    "Talkdblacklist":False,
+    "talkban":False,
+    "contact":False,
+    "invite":False,
+    'autoJoin':False,
+    'autoAdd':False,
+    'autoBlock':False,
+    'Timeline':False,
+    'autoLeave':False,
+    'autoLeave1':False,
+    "detectMention":False,
+    "mentionKick":False,
+    "welcomeOn":False,
+    "stickerOn":False,
+    "Addsticker":{
+            "name": "",
+            "status":False
+            },
+    "stk":{},
+    "selfbot":True,
+    "Images":{},
+    "Img":{},
+    "Addimage":{
+            "name": "",
+            "status":False
+            },
+    "Videos":{},
+    "Addaudio":{
+            "name": "",
+            "status":False
+            },
+    "Addvideo":{
+            "name": "",
+            "status":False
+            },
+    "unsend":False,
+    "mention":"Jangan ngintip terus kak 😒",
+    "Respontag":"GIFT NIH BUAT LU",
+    "welcome":"Welcome kk .......",
+    "leave":"See you next againt later",
+    "comment":"Super Like by : Apk Team Bots",
+    "message":"Ready Radiibots Protection \nProteCT your Groups",
     "myProfile": {
         "displayName": "",
         "coverId": "",
