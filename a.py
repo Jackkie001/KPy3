@@ -11,13 +11,13 @@ from googletrans import Translator
 from humanfriendly import format_timespan, format_size, format_number, format_length
 import time, random, sys, json, codecs, threading, glob, re, string, os, requests, six, ast, pytz, urllib, urllib3, urllib.parse, traceback, atexit, subprocess
 
-ririn = LINE("EtAMLgb0zoJwV5h2ESr6.7kqscP17dKQEF08Bg5AKnG.LkvtwSoDccEW4SQQb9rQh1/2dUXRv11BQfcebyDgolg='''''")
+cl = LINE()
 #ririn = LINE("TOKENMU")
 
-ririnMid = ririn.profile.mid
-ririnProfile = ririn.getProfile()
-ririnSettings = ririn.getSettings()
-ririnPoll = OEPoll(ririn)
+ririnMid = cl.profile.mid
+ririnProfile = cl.getProfile()
+ririnSettings = cl.getSettings()
+ririnPoll = OEPoll(cl)
 botStart = time.time()
 
 print ("╔═════════════════════════\n║╔════════════════════════\n║╠❂➣ DNA BERHASIL LOGIN\n║╚════════════════════════\n╚═════════════════════════")
@@ -245,9 +245,9 @@ try:
 except:
     print("Couldn't read Log data")
     
-wait["myProfile"]["displayName"] = ririnProfile.displayName
-wait["myProfile"]["statusMessage"] = ririnProfile.statusMessage
-wait["myProfile"]["pictureStatus"] = ririnProfile.pictureStatus
+wait["myProfile"]["displayName"] = clProfile.displayName
+wait["myProfile"]["statusMessage"] = clProfile.statusMessage
+wait["myProfile"]["pictureStatus"] = clProfile.pictureStatus
 coverId = ririn.getProfileDetail()["result"]["objectId"]
 wait["myProfile"]["coverId"] = coverId
 
@@ -314,7 +314,7 @@ def sendMention(to, text="", mids=[]):
         arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mids[0]}
         arr.append(arrData)
         textx += mention + str(text)
-    ririn.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
 
 def command(text):
     pesan = text.lower()
