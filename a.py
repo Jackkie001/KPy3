@@ -1002,3 +1002,418 @@ if op.type == 17:
                                         except:
                                             pass
                 return
+
+            if Cmid in op.param3:
+                if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                    try:
+                        km.kickoutFromGroup(op.param1,[op.param2])
+                        km.findAndAddContactsByMid(op.param3)
+                        km.inviteIntoGroup(op.param1,[op.param3])
+                        kc.acceptGroupInvitation(op.param1)
+                        wait["blacklist"][op.param2] = True
+                    except:
+                        try:
+                            cl.kickoutFromGroup(op.param1,[op.param2])
+                            cl.findAndAddContactsByMid(op.param3)
+                            cl.inviteIntoGroup(op.param1,[op.param3])
+                            kc.acceptGroupInvitation(op.param1)
+                            wait["blacklist"][op.param2] = True
+                        except:
+                            try:
+                                ki.kickoutFromGroup(op.param1,[op.param2])
+                                ki.findAndAddContactsByMid(op.param3)
+                                ki.inviteIntoGroup(op.param1,[op.param3])
+                                kc.acceptGroupInvitation(op.param1)
+                                wait["blacklist"][op.param2] = True
+                            except:
+                                try:
+                                    kk.kickoutFromGroup(op.param1,[op.param2])
+                                    kk.findAndAddContactsByMid(op.param3)
+                                    kk.inviteIntoGroup(op.param1,[op.param3])
+                                    kc.acceptGroupInvitation(op.param1)
+                                    wait["blacklist"][op.param2] = True
+                                except:
+                                    try:
+                                        km.kickoutFromGroup(op.param1,[op.param2])
+                                        km.findAndAddContactsByMid(op.param3)
+                                        km.inviteIntoGroup(op.param1,[op.param3])
+                                        kc.acceptGroupInvitation(op.param1)
+                                        wait["blacklist"][op.param2] = True
+                                    except:
+                                        try:
+                                            kb.kickoutFromGroup(op.param1,[op.param2])
+                                            kb.findAndAddContactsByMid(op.param3)
+                                            kb.inviteIntoGroup(op.param1,[op.param3])
+                                            kc.acceptGroupInvitation(op.param1)
+                                            wait["blacklist"][op.param2] = True
+                                        except:
+                                            pass
+                return
+
+            if Dmid in op.param3:
+                if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                    try:
+                        kb.kickoutFromGroup(op.param1,[op.param2])
+                        kb.findAndAddContactsByMid(op.param3)
+                        kb.inviteIntoGroup(op.param1,[op.param3])
+                        km.acceptGroupInvitation(op.param1)
+                        wait["blacklist"][op.param2] = True
+                    except:
+                        try:
+                            cl.kickoutFromGroup(op.param1,[op.param2])
+                            cl.findAndAddContactsByMid(op.param3)
+                            cl.inviteIntoGroup(op.param1,[op.param3])
+                            km.acceptGroupInvitation(op.param1)
+                            wait["blacklist"][op.param2] = True
+                        except:
+                            try:
+                                ki.kickoutFromGroup(op.param1,[op.param2])
+                                ki.findAndAddContactsByMid(op.param3)
+                                ki.inviteIntoGroup(op.param1,[op.param3])
+                                km.acceptGroupInvitation(op.param1)
+                                wait["blacklist"][op.param2] = True
+                            except:
+                                try:
+                                    kk.kickoutFromGroup(op.param1,[op.param2])
+                                    kk.findAndAddContactsByMid(op.param3)
+                                    kk.inviteIntoGroup(op.param1,[op.param3])
+                                    km.acceptGroupInvitation(op.param1)
+                                    wait["blacklist"][op.param2] = True
+                                except:
+                                    try:
+                                        kc.kickoutFromGroup(op.param1,[op.param2])
+                                        kc.findAndAddContactsByMid(op.param3)
+                                        kc.inviteIntoGroup(op.param1,[op.param3])
+                                        km.acceptGroupInvitation(op.param1)
+                                        wait["blacklist"][op.param2] = True
+                                    except:
+                                        try:
+                                            kb.kickoutFromGroup(op.param1,[op.param2])
+                                            kb.findAndAddContactsByMid(op.param3)
+                                            kb.inviteIntoGroup(op.param1,[op.param3])
+                                            km.acceptGroupInvitation(op.param1)
+                                            wait["blacklist"][op.param2] = True
+                                        except:
+                                            pass
+                return
+
+            if Dmid in op.param3:
+                if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                    try:
+                        cl.kickoutFromGroup(op.param1,[op.param2])
+                        cl.findAndAddContactsByMid(op.param3)
+                        cl.inviteIntoGroup(op.param1,[op.param3])
+                        kb.acceptGroupInvitation(op.param1)
+                        wait["blacklist"][op.param2] = True
+                    except:
+                        try:
+                            ki.kickoutFromGroup(op.param1,[op.param2])
+                            ki.findAndAddContactsByMid(op.param3)
+                            ki.inviteIntoGroup(op.param1,[op.param3])
+                            kb.acceptGroupInvitation(op.param1)
+                            wait["blacklist"][op.param2] = True
+                        except:
+                            try:
+                                kk.kickoutFromGroup(op.param1,[op.param2])
+                                kk.findAndAddContactsByMid(op.param3)
+                                kk.inviteIntoGroup(op.param1,[op.param3])
+                                kb.acceptGroupInvitation(op.param1)
+                                wait["blacklist"][op.param2] = True
+                            except:
+                                try:
+                                    kc.kickoutFromGroup(op.param1,[op.param2])
+                                    kc.findAndAddContactsByMid(op.param3)
+                                    kc.inviteIntoGroup(op.param1,[op.param3])
+                                    kb.acceptGroupInvitation(op.param1)
+                                    wait["blacklist"][op.param2] = True
+                                except:
+                                    try:
+                                        km.kickoutFromGroup(op.param1,[op.param2])
+                                        km.findAndAddContactsByMid(op.param3)
+                                        km.inviteIntoGroup(op.param1,[op.param3])
+                                        kb.acceptGroupInvitation(op.param1)
+                                        wait["blacklist"][op.param2] = True
+                                    except:
+                                        try:
+                                            cl.kickoutFromGroup(op.param1,[op.param2])
+                                            cl.findAndAddContactsByMid(op.param3)
+                                            cl.inviteIntoGroup(op.param1,[op.param3])
+                                            kb.acceptGroupInvitation(op.param1)
+                                            wait["blacklist"][op.param2] = True
+                                        except:
+                                            pass
+                return
+
+        if op.type == 19:
+            if op.param3 in admin:
+                try:
+                    cl.kickoutFromGroup(op.param1,[op.param2])
+                    cl.findAndAddContactsByMid(op.param3)
+                    cl.inviteIntoGroup(op.param1,[op.param3])
+                except:
+                    try:
+                        ki.kickoutFromGroup(op.param1,[op.param2])
+                        ki.findAndAddContactsByMid(op.param3)
+                        ki.inviteIntoGroup(op.param1,[op.param3])
+                    except:
+                        try:
+                            kk.kickoutFromGroup(op.param1,[op.param2])
+                            kk.findAndAddContactsByMid(op.param3)
+                            kk.inviteIntoGroup(op.param1,[op.param3])
+                        except:
+                            pass
+
+                return
+
+        if op.type == 19:
+            if op.param3 in staff:
+                try:
+                    cl.kickoutFromGroup(op.param1,[op.param2])
+                    cl.findAndAddContactsByMid(op.param3)
+                    cl.inviteIntoGroup(op.param1,[op.param3])
+                except:
+                    try:
+                        ki.kickoutFromGroup(op.param1,[op.param2])
+                        ki.findAndAddContactsByMid(op.param3)
+                        ki.inviteIntoGroup(op.param1,[op.param3])
+                    except:
+                        try:
+                            kk.kickoutFromGroup(op.param1,[op.param2])
+                            kk.findAndAddContactsByMid(op.param3)
+                            kk.inviteIntoGroup(op.param1,[op.param3])
+                        except:
+                            pass
+
+                return
+            
+        if op.type == 55:
+            if op.param2 in wait["blacklist"]:
+                if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                    random.choice(ABC).kickoutFromGroup(op.param1,[op.param2])
+                else:
+                    pass
+
+            if op.param1 in Setmain["RAreadPoint"]:
+                if op.param2 in Setmain["RAreadMember"][op.param1]:
+                    pass
+                else:
+                    Setmain["RAreadMember"][op.param1][op.param2] = True
+            else:
+                pass
+
+            if cctv['cyduk'][op.param1]==True:
+                if op.param1 in cctv['point']:
+                    Name = cl.getContact(op.param2).displayName
+                    if Name in cctv['sidermem'][op.param1]:
+                        pass
+                    else:
+                        cctv['sidermem'][op.param1] += "\n~ " + Name
+                        siderMembers(op.param1, [op.param2])
+                        sider = cl.getContact(op.param2).picturePath
+                        image = 'http://dl.profile.line.naver.jp'+sider
+                        cl.sendImageWithURL(op.param1, image)
+
+        if op.type == 26:
+           if wait["selfbot"] == True:
+               msg = op.message
+               if msg._from not in Bots:
+                   if msg._from in wait["blacklist"]:
+                      try:
+                          random.choice(ABC).kickoutFromGroup(msg.to, [msg._from])
+                      except:
+                          try:
+                              random.choice(ABC).kickoutFromGroup(msg.to, [msg._from])
+                          except:
+                              random.choice(ABC).kickoutFromGroup(msg.to, [msg._from])
+               if msg._from not in Bots:
+                 if wait["talkban"] == True:
+                   if msg._from in wait["Talkblacklist"]:
+                      try:
+                          random.choice(ABC).kickoutFromGroup(msg.to, [msg._from])
+                      except:
+                          try:
+                              random.choice(ABC).kickoutFromGroup(msg.to, [msg._from])
+                          except:
+                              random.choice(ABC).kickoutFromGroup(msg.to, [msg._from])
+               if 'MENTION' in msg.contentMetadata.keys() != None:
+                if msg._from not in Bots:
+                 if wait["detectMention"] == True:
+                   name = re.findall(r'@(\w+)', msg.text)
+                   mention = ast.literal_eval(msg.contentMetadata['MENTION'])
+                   mentionees = mention['MENTIONEES']
+                   for mention in mentionees:
+                        if mention ['M'] in admin:
+                           saints = cl.getContact(msg._from)
+                           sendMention(msg.to, saints.mid, "", wait["Respontag"])
+                           cl.sendMessage(msg.to, None, contentMetadata={"PRDID":"a0768339-c2d3-4189-9653-2909e9bb6f58","PRDTYPE":"THEME","MSGTPL":"6"}, contentType=9)
+                           break
+               if 'MENTION' in msg.contentMetadata.keys() != None:
+                if msg._from not in Bots:
+                 if wait["mentionKick"] == True:
+                   name = re.findall(r'@(\w+)', msg.text)
+                   mention = ast.literal_eval(msg.contentMetadata['MENTION'])
+                   mentionees = mention['MENTIONEES']
+                   for mention in mentionees:
+                        if mention ['M'] in admin:
+                           cl.sendMessage(msg.to, "Jangan tag saya ogeb")
+                           cl.kickoutFromGroup(msg.to, [msg._from])
+                           break
+                if op.type == 25 or op.type == 26:
+            msg = op.message
+            text = msg.text
+            msg_id = msg.id
+            receiver = msg.to
+            sender = msg._from
+            if msg.toType == 2:
+               if msg.toType == 0:
+                    to = msg._from
+               elif msg.toType == 2:
+                    to = msg.to
+               if msg.contentType == 16:
+                    if wait["Timeline"] == True:
+                            ret_ = "「 Detail Postingan 」"
+                            if msg.contentMetadata["serviceType"] == "GB":
+                                contact = cl.getContact(sender)
+                                auth = "\n• Penulis : {}".format(str(contact.displayName))
+                            else:
+                                auth = "\n• Penulis : {}".format(str(msg.contentMetadata["serviceName"]))
+                            ret_ += auth
+                            if "stickerId" in msg.contentMetadata:
+                                stck = "\n• Stiker : https://line.me/R/shop/detail/{}".format(str(msg.contentMetadata["packageId"]))
+                                ret_ += stck
+                            if "mediaOid" in msg.contentMetadata:
+                                object_ = msg.contentMetadata["mediaOid"].replace("svc=myhome|sid=h|","")
+                                if msg.contentMetadata["mediaType"] == "V":
+                                    if msg.contentMetadata["serviceType"] == "GB":
+                                        ourl = "\n• Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
+                                        murl = "\n• Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(msg.contentMetadata["mediaOid"]))
+                                    else:
+                                        ourl = "\n• Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
+                                        murl = "\n• Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(object_))
+                                    ret_ += murl
+                                else:
+                                    if msg.contentMetadata["serviceType"] == "GB":
+                                        ourl = "\n• Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
+                                    else:
+                                        ourl = "\n• Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
+                                ret_ += ourl
+                            if "text" in msg.contentMetadata:
+                                text = "\n• Tulisan : {}".format(str(msg.contentMetadata["text"]))
+                                purl = "\n• Post URL : {}".format(str(msg.contentMetadata["postEndUrl"]).replace("line://","https://line.me/R/"))
+                                ret_ += purl
+                                ret_ += text
+                            cl.sendMessage(to, str(ret_))
+                            channel.like(url[25:58], url[66:], likeType=1006)
+                            channel.comment(url[25:58], url[66:], wait["message"])
+               if msg.contentType == 0:
+                    msg_dict[msg.id] = {"text":msg.text,"from":msg._from,"createdTime":msg.createdTime}
+               if msg.contentType == 1:
+                    path = cl.downloadObjectMsg(msg_id)
+                    msg_dict[msg.id] = {"text":'Gambarnya dibawah',"data":path,"from":msg._from,"createdTime":msg.createdTime}
+               if msg.contentType == 7:
+                   stk_id = msg.contentMetadata["STKID"]
+                   stk_ver = msg.contentMetadata["STKVER"]
+                   pkg_id = msg.contentMetadata["STKPKGID"]
+                   ret_ = "\n\n「 Sticker Info 」"
+                   ret_ += "\n• Sticker ID : {}".format(stk_id)
+                   ret_ += "\n• Sticker Version : {}".format(stk_ver)
+                   ret_ += "\n• Sticker Package : {}".format(pkg_id)
+                   ret_ += "\n• Sticker Url : line://shop/detail/{}".format(pkg_id)
+                   query = int(stk_id)
+                   if type(query) == int:
+                            data = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+str(query)+'/ANDROID/sticker.png'
+                            path = cl.downloadFileURL(data)
+                            msg_dict1[msg.id] = {"text":str(ret_),"data":path,"from":msg._from,"createdTime":msg.createdTime}
+               if msg.contentType == 7:
+                if wait["stickerOn"] == True:
+                    stk_id = msg.contentMetadata['STKID']
+                    stk_ver = msg.contentMetadata['STKVER']
+                    pkg_id = msg.contentMetadata['STKPKGID']
+                    with requests.session() as s:
+                        s.headers['user-agent'] = 'Mozilla/5.0'
+                        r = s.get("https://store.line.me/stickershop/product/{}/id".format(urllib.parse.quote(pkg_id)))
+                        soup = BeautifulSoup(r.content, 'html5lib')
+                        data = soup.select("[class~=mdBtn01Txt]")[0].text
+                        if data == 'Lihat Produk Lain':
+                            ret_ = "「 Sticker Info 」"
+                            ret_ += "\n• STICKER ID : {}".format(stk_id)
+                            ret_ += "\n• STICKER PACKAGES ID : {}".format(pkg_id)
+                            ret_ += "\n• STICKER VERSION : {}".format(stk_ver)
+                            ret_ += "\n• STICKER URL : line://shop/detail/{}".format(pkg_id)
+                            cl.sendMessage(msg.to, str(ret_))
+                            query = int(stk_id)
+                            if type(query) == int:
+                               data = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+str(query)+'/ANDROID/sticker.png'
+                               path = cl.downloadFileURL(data)
+                               cl.sendImage(msg.to,path)
+                        else:
+                            ret_ = "「 Sticker Info 」"
+                            ret_ += "\n• PRICE : "+soup.findAll('p', attrs={'class':'mdCMN08Price'})[0].text
+                            ret_ += "\n• AUTHOR : "+soup.select("a[href*=/stickershop/author]")[0].text
+                            ret_ += "\n• STICKER ID : {}".format(str(stk_id))
+                            ret_ += "\n• STICKER PACKAGES ID : {}".format(str(pkg_id))
+                            ret_ += "\n• STICKER VERSION : {}".format(str(stk_ver))
+                            ret_ += "\n• STICKER URL : line://shop/detail/{}".format(str(pkg_id))
+                            ret_ += "\n• DESCRIPTION :\n"+soup.findAll('p', attrs={'class':'mdCMN08Desc'})[0].text
+                            cl.sendMessage(msg.to, str(ret_))
+                            query = int(stk_id)
+                            if type(query) == int:
+                               data = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+str(query)+'/ANDROID/sticker.png'
+                               path = cl.downloadFileURL(data)
+                               cl.sendImage(msg.to,path)
+               if msg.contentType == 13:
+                 if wait["contact"] == True:
+                    msg.contentType = 0
+                    cl.sendMessage(msg.to,msg.contentMetadata["mid"])
+                    if 'displayName' in msg.contentMetadata:
+                        contact = cl.getContact(msg.contentMetadata["mid"])
+                        path = cl.getContact(msg.contentMetadata["mid"]).picturePath
+                        image = 'http://dl.profile.line.naver.jp'+path
+                        cl.sendMessage(msg.to," 「 Contact Info 」\n「✭」 Nama : " + msg.contentMetadata["displayName"] + "\n「✭」 MID : " + msg.contentMetadata["mid"] + "\n「✭」 Status Msg : " + contact.statusMessage + "\n「✭」 Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
+                        cl.sendImageWithURL(msg.to, image)
+               if msg.contentType == 13:
+                if msg._from in admin:
+                  if wait["invite"] == True:
+                    msg.contentType = 0
+                    contact = cl.getContact(msg.contentMetadata["mid"])
+                    invite = msg.contentMetadata["mid"]
+                    groups = cl.getGroup(msg.to)
+                    pending = groups.invitee
+                    targets = []
+                    for s in groups.members:
+                        if invite in wait["blacklist"]:
+                            cl.sendMessage(msg.to, "「Dia ke bl kak... hpus bl dulu lalu invite lagi」")
+                            break
+                        else:
+                            targets.append(invite)
+                    if targets == []:
+                        pass
+                    else:
+                         for target in targets:
+                             try:
+                                  cl.findAndAddContactsByMid(target)
+                                  cl.inviteIntoGroup(msg.to,[target])
+                                  ryan = cl.getContact(target)
+                                  zx = ""
+                                  zxc = ""
+                                  zx2 = []
+                                  xpesan =  "「 Sukses Invite 」\nNama "
+                                  ret_ = "「Ketik Invite off jika sudah done」"
+                                  ry = str(ryan.displayName)
+                                  pesan = ''
+                                  pesan2 = pesan+"@x\n"
+                                  xlen = str(len(zxc)+len(xpesan))
+                                  xlen2 = str(len(zxc)+len(pesan2)+len(xpesan)-1)
+                                  zx = {'S':xlen, 'E':xlen2, 'M':ryan.mid}
+                                  zx2.append(zx)
+                                  zxc += pesan2
+                                  text = xpesan + zxc + ret_ + ""
+                                  cl.sendMessage(msg.to, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
+                                  wait["invite"] = False
+                                  break
+                             except:
+                                  cl.sendText(msg.to,"Anda terkena limit")
+                                  wait["invite"] = False
+                                  break
+                                    
+                                    
