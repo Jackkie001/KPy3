@@ -11,7 +11,7 @@ from googletrans import Translator
 from humanfriendly import format_timespan, format_size, format_number, format_length
 import time, random, sys, json, codecs, threading, glob, re, string, os, requests, six, ast, pytz, urllib, urllib3, urllib.parse, traceback, atexit, subprocess
 
-ririn = LINE("EtKtkL176FshhP9PKaV6.7kqscP17dKQEF08Bg5AKnG.XNdQINxpbD1oN9msScvYFDrCkFFwTtDiaAH4+0uKmNg=")
+ririn = LINE("EtAMLgb0zoJwV5h2ESr6.7kqscP17dKQEF08Bg5AKnG.LkvtwSoDccEW4SQQb9rQh1/2dUXRv11BQfcebyDgolg=")
 #ririn = LINE("TOKENMU")
 
 ririnMid = ririn.profile.mid
@@ -344,15 +344,11 @@ def helpmessage():
                     "╔════════════════════╗" + "\n" + \
                     "               ✪ 🆂🆃🅰🆃🆄🆂 ✪" + "\n" + \
                     "╠════════════════════╝" + "\n" + \
-                    "╠❂➣ " + key + "ᴄᴘᴜ" + "\n" + \
-                    "╠❂➣ " + key + "ɪғᴄᴏɴғɪɢ" + "\n" + \
-                    "╠❂➣ " + key + "ᴋᴇʀɴᴇʟ" + "\n" + \
                     "╠❂➣ " + key + "ʀᴇsᴛᴀʀᴛ" + "\n" + \
                     "╠❂➣ " + key + "ʀᴜɴᴛɪᴍᴇ" + "\n" + \
                     "╠❂➣ " + key + "sᴘ" + "\n" + \
                     "╠❂➣ " + key + "sᴘᴇᴇᴅ" + "\n" + \
                     "╠❂➣ " + key + "sᴛᴀᴛᴜs" + "\n" + \
-                    "╠❂➣ " + key + "sʏsᴛᴇᴍ" + "\n" + \
                     "╠❂➣ ᴍʏᴋᴇʏ" + "\n" + \
                     "╠❂➣ sᴇᴛᴋᴇʏ「ᴏɴ/ᴏғғ」" + "\n" + \
                     "╔════════════════════╗" + "\n" + \
@@ -756,18 +752,6 @@ def ririnBot(op):
                             elif cmd == "restart":
                                 ririn.sendMessage(to, "ʙᴏᴛ ʜᴀᴠᴇ ʙᴇᴇɴ ʀᴇsᴛᴀʀᴛ")
                                 restartBot()
-                            elif cmd == "ifconfig":
-                            	botKernel = subprocess.Popen(["ifconfig"], stdout=subprocess.PIPE).communicate()[0]
-                            	ririn.sendMessage(to, botKernel + "\n\n===▁ ▂ ▄ ▅ ▆ ▇ █ sᴇʀᴠᴇʀ ɪɴғᴏ ɴᴇᴛsᴛᴀᴛ █ ▇ ▆ ▅ ▄ ▂ ▁")
-                            elif cmd == "system":
-                            	botKernel = subprocess.Popen(["df","-h"], stdout=subprocess.PIPE).communicate()[0]
-                            	ririn.sendMessage(to, botKernel + "\n\n▁ ▂ ▄ ▅ ▆ ▇ █ sᴇʀᴠᴇʀ ɪɴғᴏ sʏsᴛᴇᴍ █ ▇ ▆ ▅ ▄ ▂ ▁")
-                            elif cmd == "kernel":
-                            	botKernel = subprocess.Popen(["uname","-srvmpio"], stdout=subprocess.PIPE).communicate()[0]
-                            	ririn.sendMessage(to, botKernel + "\n\n▁ ▂ ▄ ▅ ▆ ▇ █ sᴇʀᴠᴇʀ ɪɴғᴏ ᴋᴇʀɴᴇʟ █ ▇ ▆ ▅ ▄ ▂ ▁")
-                            elif cmd == "cpu":
-                            	botKernel = subprocess.Popen(["cat","/proc/cpuinfo"], stdout=subprocess.PIPE).communicate()[0]
-                            	ririn.sendMessage(to, botKernel + "\n\n▁ ▂ ▄ ▅ ▆ ▇ █ sᴇʀᴠᴇʀ ɪɴғᴏ ᴄᴘᴜ █ ▇ ▆ ▅ ▄ ▂ ▁")
 #------------------------------------============================------------------------------------#
 #======================-----------✰ ᴅɴᴀ ʙᴏᴛ ✰-----------======================#
 #------------------------------------============================------------------------------------#
@@ -891,7 +875,6 @@ def ririnBot(op):
                                     ririn.updateProfile(profile)
                                     ririn.sendMessage(to,"ᴄʜᴀɴɢᴇ ᴘʀᴏғɪʟᴇ sᴜᴄᴄᴇs :{}".format(str(string)))
                             elif cmd == "me":
-                                sendMention(to, "@!", [sender])
                                 ririn.sendContact(to, sender)
                             elif cmd == "mymid":
                                 ririn.sendMessage(to, "[ ᴍɪᴅ ]\n{}".format(sender))
