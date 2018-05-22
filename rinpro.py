@@ -742,9 +742,9 @@ def ririnBot(op):
             if wait["leaveRoom"] == True:
                 ririn.leaveRoom(op.param1)
 
-        if op.type == 25:
+        if op.type == 26:
             try:
-                print ("[ 25 ] SEND MESSAGE")
+                print ("[ 26 ] SEND MESSAGE")
                 msg = op.message
                 text = msg.text
                 msg_id = msg.id
