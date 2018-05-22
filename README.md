@@ -1,32 +1,44 @@
-# ![logo](LINE-sm.png) LINE Python
+## DnA Bot LinePy
 
-*LINE Messaging's private API*
+#Install di termux:
 
-----
+- pkg install python3 
+- pkg install pip3 
+- pkg install git 
+- git clone https://github.com/Dee-n-a/Rin
+- pip3 install rsa 
+- pip3 install thrift==0.11.0 
+- pip3 install humanfriendly
+- pip3 install requests 
+- cd Rin
+- python3 dna.py
 
-## Installation
 
-Installation is simple. It can be installed from pip using the following command:
-```sh
-$ python -m pip install -r requirements.txt
-```
+#Install di c9: 
 
-## Usage
+- apt update 
+- apt install git 
+- apt install python3 
+- apt install pip3==python3 
+- pip3 install rsa 
+- pip3 install thrift 
+- pip3 install requests 
+- pip3 install humanfriendly 
+- git clone https://github.com/Dee-n-a/Rin
+- cd protectpy3 
+- python3 protectpy3.py 
 
-```python
->>> from LineAPI.linepy import *
->>> client = LINE("")
->>> client.log("Auth Token : " + str(line.authToken))
-```
 
-## LINE
-[HelloWorld Square](https://line.me/ti/g2/LPYXUFI1YE)
+#Credit By Dee 
+- Add My ID LINE : 〘 https://line.me/ti/p/ppgIZ0JLDW 〙
 
-## Discord
-[HelloWorld](https://discord.gg/5jqbutB)
 
-## Author
-Muhammad Mursalin Darmamawan / [@Alin](https://line.me/t/p/~muhmursalind)
 
-## Author Linepy
-Fadhiil Rachman / [@fadhiilrachman](https://www.instagram.com/fadhiilrachman)
+#Special Thx : 
+- Ghost Team
+- BotEater
+- HELLO-WORLD
+- Nadya Sutjiadi
+- iiipuuul
+- Eva wongmu
+- Inne Febriani
