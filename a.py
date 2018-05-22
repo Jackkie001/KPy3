@@ -4897,6 +4897,27 @@ elif cmd == "updategrup":
                         elif text.lower() == "cek sider":
                             if msg._from in admin:
                                cl.sendMessage(msg.to, "「 Status Sider 」\nSider Msg mu :\n\n" + str(wait["mention"]))
+                            except Exception as error:
+        logError(error)
+        traceback.print_tb(error.__traceback__)
+
+while True:
+    try:
+        delete_log()
+        ops = ririnPoll.singleTrace(count=50)
+        if ops is not None:
+            for op in ops:
+                ririnBot(op)
+                ririnPoll.setRevision(op.revision)
+    except Exception as error:
+        logError(error)
+        
+def atend():
+    print("Saving")
+    with open("Log_data.json","w",encoding='utf8') as f:
+        json.dump(msg_dict, f, ensure_ascii=False, indent=4,separators=(',', ': '))
+    print("BYE")
+atexit.register(atend)
 
 
 
