@@ -1,0 +1,17 @@
+{
+    "autoadd": false,
+    "autojoin": true,
+    "autoread": false,
+    "protect": false,
+    "protectguest": false,
+    "protectqr": false,    
+    "larangan": false,    
+    "autoscan": false,
+    "cancel": false,    
+    "RAbatas":{"on":true,"members":1},
+    "RAmessage": "http://line.me/ti/p/~rian-rian.",
+    "message1": "Selamat datang...",
+    "readMember": {},
+    "blacklist": {},   
+    "readPoint": {}
+}
